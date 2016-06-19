@@ -19,7 +19,7 @@ cookie1 = source1.cookies['auth_tokens_1']
 url2 = 'http://player.ooyala.com/sas/player_api/v2/authorization/embed_code/owMjgyOkSbJagb4ozVY_03UrHYLt/J3ZmNmeDpV1EMWlR6YJU_YDCqKbh_bSg?device=html5&amp;domain=player.ooyala.com'
 cookies ={'auth_tokens_1': cookie1}
 source2 = requests.get(url2, cookies=cookies)
-encodeddata = re.findall('encoded","data":"(.*?)",', source2.text)[0]
+encodeddata = re.findall('data":"(.*?)"', source2.text)[0]
 m3u8 = base64.b64decode(encodeddata)
 return m3u8
 ]]></expres>
