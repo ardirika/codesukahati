@@ -35,7 +35,7 @@ return m3u8
 Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0</link>
 <regex>
 <name>get-encoded-url</name>
-<expres>$pyFunction:urllib.quote_plus('http://tv3flashsecure-lh.akamaihd.net/z/tv3flash_sp@392287/manifest.f4m?hdnea=$doregex[token]&amp;hdcore=2.10.3&amp;g=DRQCEZXUIBTH')</expres>
+<expres>$pyFunction:urllib.quote_plus('http://tv3flashsecure-lh.akamaihd.net/z/tv3flash_sp@392287/manifest.f4m?hdnea=$doregex[token]&amp;hdcore=2.10.3&amp;g=RNGCROGJVVOX')</expres>
 </regex>
 <regex>
 <name>token</name>
