@@ -92,3 +92,8 @@ def GetLSProData(page_data, Cookie_Jar, m):
 </regex>
 <thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/Asean%20TV/SG_channel5_zpslpt6pjmb.png</thumbnail>
 </item> 
+
+<item>
+<title>ZEE TV</title>
+<link>plugin://plugin.video.f4mTester/?url=http://www.q7t1.com:8000/live/sYKADDaJs2/SnoQc6v4hZ/1743.ts&amp;streamtype=TSDOWNLOADER</link>
+</item>
