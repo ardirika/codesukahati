@@ -46,13 +46,13 @@ return m3u8
 
 	session = requests.session()
 	headers = {"User-Agent": "Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25",
-	                         "Referer": "http://www.tonton.com.my/login",
-	                         "Connection": "keep-alive"}
+	           "Referer": "http://www.tonton.com.my/login",
+	           "Connection": "keep-alive"}
 	r = session.get('http://www.tonton.com.my/vindicia/playerOTP?id=J3ZmNmeDpV1EMWlR6YJU_YDCqKbh_bSg&amp;account_id=067dcc18-d9ad-0904-95e4-4d7e8d63cb4c', headers=headers)
 	token = re.findall(r'"token":"(.*?)"', r.text)[0].replace('\/', '/')
 	r = session.get(token, headers=headers)
 	headers = {'Referer': 'http://dpndczlul8yjf.cloudfront.net/resources/as3_vp_player_2.4.16.11.1.swf',
-	                      'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25'}
+	           'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25'}
 	r = session.get('http://player.ooyala.com/sas/akamai_edge_auth_token?embed_code=J3ZmNmeDpV1EMWlR6YJU_YDCqKbh_bSg&amp;video_pcode=owMjgyOkSbJagb4ozVY_03UrHYLt', headers=headers)
 	return r.text
   ]]></expres>
