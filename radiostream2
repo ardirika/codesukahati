@@ -1,5 +1,12 @@
-<item>
-<title>BEST FM</title>
-<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/RadioFM/BestFM_zpsxykugra9.png</thumbnail>
-<link>http://s8.voscast.com:8686/;stream.mp3</link>
-</item>
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<channels>
+
+<channel>
+<name>WORLD CHANNELS</name>
+<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/MR%20Network%20TV/flag_world_zpsic7ttnuh.png</thumbnail>
+<link>http://ignoreme</link>
+<externallink>https://raw.githubusercontent.com/indiecrew/codesukahati/master/test</externallink>
+</channel>
+
+</channels>
