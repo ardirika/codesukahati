@@ -80,7 +80,7 @@ return m3u8
 <expres></expres>
 <page>http://www.layarku.tv/forum/ucp.php?mode=login</page>
 <referer>http://www.layarku.tv/media/membertv3.php</referer>
-<rawpost>username=indiecrew&amp;password=1234567890&amp;login=Login&amp;redirect=https://www.layarku.tv/media/membertv3.php</rawpost>
+<rawpost>username=xxx&amp;password=xxx&amp;login=Login&amp;redirect=https://www.layarku.tv/media/membertv3.php</rawpost>
 <agent>Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</agent>
 <cookieJar></cookieJar>
 </regex>
@@ -109,46 +109,4 @@ def GetLSProData(page_data,Cookie_Jar,m,url = 'https://www.layarku.tv/media/ahli
 </regex>
 <accept>*/*</accept>
 <x-req>ShockwaveFlash/21.0.0.242</x-req>
-</item>
-
-<item>
-<title>[COLOR darkgreen]Online[/COLOR] TV1</title>
-<link>$doregex[m3u8]|Referer=http://cdn-rtm-player.gluempsapp.com/105/10148&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
-<regex>
-    <name>m3u8</name>
-    <expres>file="(.*?)"</expres>
-    <page>http://cdn-rtm-player.gluempsapp.com/105/10149</page>
-    <referer>http://myklik.rtm.gov.my/live/10149</referer>
-</regex>
-<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/Asean%20TV/MY_tv1_zps8mlj4nck.png</thumbnail>
-</item>
-
-<item>
-<title>[COLOR darkgreen]Online[/COLOR] BERNAMA TV</title>
-<link>http://d22b8vh21p20bg.cloudfront.net/mylive/smil:bernama2_all.smil/playlist.m3u8</link>
-<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/Asean%20TV/MY_bernamatv_zpswz7nlgor.png</thumbnail>
-</item>
-
-<item>
-<title>[COLOR darkgreen]Online[/COLOR] CHANNEL 5</title>
-<link>$doregex[m3u8]|X-Forwarded-For=203.208.224.155</link>
-<regex>
-    <name>m3u8</name>
-    <expres>Channel 5.*\n.*url": "(.*?)",</expres>
-    <page>http://goo.gl/uQhZSa</page>
-  <referer>http://goo.gl/uQhZSa</referer>
-</regex>
-<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/Asean%20TV/SG_channel5_zpslpt6pjmb.png</thumbnail>
-</item>
-
-<item>
-<title>[COLOR darkgreen]Online[/COLOR] ANTV</title>
-<link>plugin://plugin.video.f4mTester/?url=http://edge.nim.mivo.tv/mpi7pjqx1esapruf/antv2_all/playlist.m3u8?wmsAuthSign=$doregex[tok]&amp;streamtype=HLS|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
-<regex>
-<name>tok</name>
-<expres>wmsAuthSign=(.*)</expres>
-<page>http://api.mivo.com/v3/mobile/channels/wms-auth</page>
-<referer>http://api.mivo.com/</referer>
-</regex>
-<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/Asean%20TV/ID_antv_zps5qe3o8qy.png</thumbnail>
 </item>
