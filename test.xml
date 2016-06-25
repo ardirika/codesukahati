@@ -110,3 +110,42 @@ def GetLSProData(page_data,Cookie_Jar,m,url = 'https://www.layarku.tv/media/ahli
 <accept>*/*</accept>
 <x-req>ShockwaveFlash/21.0.0.242</x-req>
 </item>
+
+<item>
+<title>ASTRO AWANI</title>
+<link>http://bcoveliveios-i.akamaihd.net/hls/live/225864/4508222217001/master_Layer6.m3u8</link>
+<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/Asean%20TV/MY_awani_zpsssci0ox7.png</thumbnail>
+</item>
+
+<item>
+<title>TV1</title>
+ <link>$doregex[m3u8]|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25&amp;Referer=http://cdn-rtm-player.gluempsapp.com/105/10148</link>
+  <regex>
+    <name>m3u8</name>
+    <expres>file="([^\"]+)"</expres>
+    <page>http://cdn-rtm-player.gluempsapp.com/105/10149</page>
+    <referer>http://cdn-rtm-player.gluempsapp.com/105/10149</referer>
+    <agent>Mozilla/5.0</agent>
+    <accept>*/*</accept>
+    <cookieJar></cookieJar>
+  </regex>
+<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/Asean%20TV/MY_tv1_zps8mlj4nck.png</thumbnail>
+</item>
+
+<item>
+<title>SURIA</title>
+<link>$doregex[m3u8]|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
+<regex>
+	<name>m3u8</name>
+	<expres>Suria.*\n.*url": "(.*?)",</expres>
+	<page>http://goo.gl/uQhZSa</page>
+        <referer>http://goo.gl/uQhZSa</referer>
+</regex>
+<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/Asean%20TV/SG_suria_zpsipi9s6ls.png</thumbnail>
+</item>
+
+<item>
+<title>ZEE TV</title>
+<link>plugin://plugin.video.f4mTester/?url=http://www.q7t1.com:8000/live/sYKADDaJs2/SnoQc6v4hZ/1743.ts&amp;streamtype=TSDOWNLOADER</link>
+<thumbnail>http://res.cloudinary.com/idiso/image/upload/q_70/v1448492098/ydqgeqtcxyylxhjlk2hs.png</thumbnail>
+</item>
