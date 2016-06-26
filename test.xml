@@ -110,3 +110,10 @@ def GetLSProData(page_data,Cookie_Jar,m,url = 'https://www.layarku.tv/media/ahli
 <accept>*/*</accept>
 <x-req>ShockwaveFlash/21.0.0.242</x-req>
 </item>
+
+<item>
+<title>CNA</title>
+<link>plugin://plugin.video.f4mTester/?url=http://imtcnai-lh.akamaihd.net/z/cnai_main@334572/manifest.f4m?hdcore=3.2
+&amp;streamtype=TSDOWNLOADER</link>
+<thumbnail></thumbnail>
+</item>
