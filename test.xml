@@ -96,71 +96,63 @@ return m3u8
 <link>http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
 </item>
 
-<channel>
-<name>[COLOR skyblue]VIDEO : ANIMATION MOVIES[/COLOR] (BETA RELEASE)</name>
-<thumbnail>http://community-links.googlecode.com/svn/icons/news-icon.png</thumbnail>
-<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
 <item>
-<title>[COLOR skyblue]ANIMATION[/COLOR]</title>
+<title>ALL MOVIES & TV SHOWS</title>
 <link>$doregex[makelist]</link>
+
 <regex>
       <name>makelist</name>
       <listrepeat><![CDATA[
-               <title>[makelist.param2]</title>
-               <link>$doregex[makelist2]</link>
-               <thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/MR%20Network%20TV/flag_world_zpsic7ttnuh.png</thumbnail>
+               <title>Page [makelist.param2]</title>
+               <link>$doregex[makelist]</link>
+               <thumbnail>https://raw.githubusercontent.com/team-avengers/Avengers/master/Icons/MOVIES.png</thumbnail>
       ]]></listrepeat>
-      <expres><![CDATA[mega-links-head"  href="\/tag\/(.*?)">(.*?)<\/a]]><expres>
-      <page>http://pubfilm.com/</page>
-      <cookieJar></cookieJar>
-</regex>>
+      <expres><![CDATA[>([1-9])<\/(?:.*?>)<a]]></expres>
+      <page>http://pubfilm.com/tag/animation</page>
+</regex>
+
 <regex>
       <name>makelist2</name>
       <listrepeat><![CDATA[
-               <title>Page [makelist2.param1]</title>
-               <link>$doregex[makelist3]</link>
-               <thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/MR%20Network%20TV/flag_world_zpsic7ttnuh.png</thumbnail>
-      ]]></listrepeat>
-      <expres><![CDATA[>([1-9])<\/(?:.*?>)<a]]></expres>
-      <page>http://pubfilm.com/tag/[makelist.param1]</page>
-</regex>
-<regex>
-      <name>makelist3</name>
-      <listrepeat><![CDATA[
-               <title>[makelist3.param4] ([makelist3.param1] )</title>
+               <title>[makelist2.param4] ([makelist2.param1] )</title>
                <link>$doregex[finalURL]</link>
-               <thumbnail>[makelist3.param2]</thumbnail>
+               <thumbnail>[makelist2.param2]</thumbnail>
       ]]></listrepeat>
       <expres><![CDATA[f_tag">(.*?)<\/.*\n.*\n.*\n.*src="([^"]*)".*\n.*\n.*\n.*\n.*post-box-title"><a href="([^"]*)".*?>(.*?)<\/a]]></expres>
-      <page>http://pubfilm.com/tag/[makelist.param1]/page/[makelist2.param1]</page>
+      <page>http://pubfilm.com/tag/animation/page/[makelist.param1]</page>
 </regex>
+
 <regex>
     <name>finalURL</name>
     <expres>$pyFunction: '$doregex[720]' if not '$doregex[720]'=='' else '$doregex[480]'</expres>
     <page></page>
 </regex>
+
 <regex>
       <name>720</name>
       <expres>file":"([^"]+)","type":"mp4","label":"[6-7]<expres>
       <page>$doregex[get-api]</page>
-      <referer>[makelist3.param3]</referer>
+      <referer>[makelist2.param3]</referer>
       <cookieJar></cookieJar>
 </regex>
+
 <regex>
       <name>480</name>
       <expres>file":"([^"]+)","type":"mp4","label":"[4-5]<expres>
       <page>$doregex[get-api]</page>
-      <referer>[makelist3.param3]</referer>
+      <referer>[makelist2.param3]</referer>
       <cookieJar></cookieJar>
 </regex>
+
 <regex>
       <name>get-api</name>
       <expres>href=[",'](http.*\/api\/player\.php.*?)[",']<expres>
-      <page>[makelist3.param3]</page>
-      <referer>http://pubfilm.com/tag/animation</referer>
+      <page>[makelist2.param3]</page>
+      <referer>http://pubfilm.com/</referer>
       <cookieJar></cookieJar>
 </regex>
-<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/MR%20Network%20TV/flag_world_zpsic7ttnuh.png</thumbnail>
+
+<thumbnail>https://raw.githubusercontent.com/team-avengers/Avengers/master/Icons/MOVIES.png</thumbnail>
 </item>
-</items>
-</channel>
+
