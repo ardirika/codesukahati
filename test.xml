@@ -35,7 +35,7 @@ return m3u8
 <link>plugin://plugin.video.f4mTester/?streamtype=HDS&amp;maxbitrate=1264000&amp;url=$doregex[get-encoded-url]</link>
  <regex>
   <name>get-encoded-url</name>
-  <expres>$pyFunction:urllib.quote_plus('http://tv3flashsecure-lh.akamaihd.net/z/tv3flash_sp@392287/manifest.f4m?hdnea=$doregex[token]&amp;hdcore=2.10.3&amp;g=RNGCROGJVVOX')</expres>
+  <expres>$pyFunction:urllib.quote_plus('http://tv3flashsecure-lh.akamaihd.net/z/tv3flash_sp@392287/manifest.f4m?hdnea=$doregex[token]&amp;hdcore=2.10.3&amp;g=MFULKRPDFPDH')</expres>
  </regex>
  <regex>
   <name>token</name>
