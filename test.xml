@@ -1,7 +1,6 @@
 <item>
 <title>TV3-1</title>
-<link>$doregex[m3u8]|Referer=http://player.ooyala.com/static/v4/stable/4.3.3/video-plugin/bitdashplayer.swf&amp;User-Agent=
-Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0</link>
+<link>$doregex[m3u8]|Referer=http://player.ooyala.com/static/v4/stable/4.3.3/video-plugin/bitdashplayer.swf&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
 <regex>
 <name>m3u8</name>
  
@@ -61,10 +60,10 @@ return m3u8
 
 <item>
 <title>TV3-3</title>
-<link>$doregex[m3u8]|X-Forwarded-For=42.154.55.155</link>
+<link>$doregex[m3u8]|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
 <regex>
 	<name>m3u8</name>
-	<expres>src="(.*?)"</expres>
+	<expres>id="mamak" src="(.*?)"</expres>
 	<page>http://tvon9ac10.blogspot.kr/2014/08/tv3-live-streaming.html</page>
   <referer>http://tvon9ac10.blogspot.kr/2014/08/tv3-live-streaming.html</referer>
 </regex>
