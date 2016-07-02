@@ -92,25 +92,25 @@ return m3u8
 
 <regex>
       <name>720</name>
-      <expres>file":"([^"]+)","type":"mp4","label":"[6-7]<expres>
+      <expres>file":"([^"]+)","type":"mp4","label":"720p"<expres>
       <page>$doregex[get-api]</page>
-      <referer>[makelist2.param3]</referer>
+      <referer>[makelist.param3]</referer>
       <cookieJar></cookieJar>
 </regex>
 
 <regex>
       <name>480</name>
-      <expres>file":"([^"]+)","type":"mp4","label":"[4-5]<expres>
+      <expres>file":"([^"]+)","type":"mp4","label":"480p"<expres>
       <page>$doregex[get-api]</page>
-      <referer>[makelist2.param3]</referer>
+      <referer>[makelist.param3]</referer>
       <cookieJar></cookieJar>
 </regex>
 
 <regex>
       <name>get-api</name>
       <expres>href=[",'](http.*\/api\/player\.php.*?)[",']<expres>
-      <page>[makelist2.param3]</page>
-      <referer>http://pubfilm.com/</referer>
+      <page>[makelist.param3]</page>
+      <referer>http://pubfilm.com/tag/animation</referer>
       <cookieJar></cookieJar>
 </regex>
 
