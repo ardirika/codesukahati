@@ -1,6 +1,6 @@
 <item>
 <title>TV3-1</title>
-<link>$doregex[m3u8]|Referer=http://player.ooyala.com/static/cacheable/a749e376b1fadc6784b96bd76a37692d/player_v2.swf?player=dde0012b6dcc4dc7b26306bdaff0dce2&amp;User-Agent=
+<link>$doregex[m3u8]|Referer=plugin=http://player.ooyala.com/static/v4/stable/4.3.3/video-plugin/bitdashplayer.swf&amp;User-Agent=
 Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0</link>
 <regex>
 <name>m3u8</name>
@@ -48,7 +48,7 @@ return m3u8
 	headers = {"User-Agent": "Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25",
 	           "Referer": "http://www.tonton.com.my/login",
 	           "Connection": "keep-alive"}
-	r = session.get('http://www.tonton.com.my/vindicia/playerOTP?id=J3ZmNmeDpV1EMWlR6YJU_YDCqKbh_bSg&amp;account_id=067dcc18-d9ad-0904-95e4-4d7e8d63cb4c', headers=headers)
+	r = session.get('http://www.tonton.com.my/vindicia/playerOTP?id=J3ZmNmeDpV1EMWlR6YJU_YDCqKbh_bSg', headers=headers)
 	token = re.findall(r'"token":"(.*?)"', r.text)[0].replace('\/', '/')
 	r = session.get(token, headers=headers)
 	headers = {'Referer': 'http://dpndczlul8yjf.cloudfront.net/resources/as3_vp_player_2.4.16.11.1.swf',
@@ -88,17 +88,17 @@ return m3u8
 
 <item>
 <title>TV3-4</title>
-<link>http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1001.m3u8|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
+<link>http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1001.m3u8|plugin=http://player.ooyala.com/static/v4/stable/4.3.3/video-plugin/bitdashplayer.swf</link>
 </item>
 
 <item>
 <title>TV3-5</title>
-<link>http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
+<link>http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8|plugin=http://player.ooyala.com/static/v4/stable/4.3.3/video-plugin/bitdashplayer.swf</link>
 </item>
 
 <item>
 <title>TV3-6</title>
-<p2p>p2p://103.254.153.214:9999/56f8f0da000c674d2d9242ea42c5177c</p2p>
+<p2p>103.254.153.214:9999/56f8f0da000c674d2d9242ea42c5177c</p2p>
 </item>
 
 <item>
@@ -108,20 +108,9 @@ return m3u8
 <regex>
       <name>makelist</name>
       <listrepeat><![CDATA[
-               <title>Page [makelist.param2]</title>
-               <link>$doregex[makelist]</link>
-               <thumbnail>https://raw.githubusercontent.com/team-avengers/Avengers/master/Icons/MOVIES.png</thumbnail>
-      ]]></listrepeat>
-      <expres><![CDATA[>([1-9])<\/(?:.*?>)<a]]></expres>
-      <page>http://pubfilm.com/tag/animation</page>
-</regex>
-
-<regex>
-      <name>makelist2</name>
-      <listrepeat><![CDATA[
-               <title>[makelist2.param4] ([makelist2.param1] )</title>
+               <title>[makelist.param4] ([makelist.param1] )</title>
                <link>$doregex[finalURL]</link>
-               <thumbnail>[makelist2.param2]</thumbnail>
+               <thumbnail>[makelist.param2]</thumbnail>
       ]]></listrepeat>
       <expres><![CDATA[f_tag">(.*?)<\/.*\n.*\n.*\n.*src="([^"]*)".*\n.*\n.*\n.*\n.*post-box-title"><a href="([^"]*)".*?>(.*?)<\/a]]></expres>
       <page>http://pubfilm.com/tag/animation/page/[makelist.param1]</page>
