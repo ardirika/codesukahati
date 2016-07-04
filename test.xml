@@ -59,7 +59,7 @@ return m3u8
 </item>
 
 <item>
-<title>Animation Pubfilm</title>
+<title>Animation at Pubfilm</title>
 <link>$doregex[showPages]</link>
 
 <regex>
@@ -69,7 +69,9 @@ return m3u8
                <link>$doregex[finalURL]</link>
                <thumbnail>[makelist.param2]</thumbnail>
       ]]></listrepeat>
-      <expres>post-thumbnail.*\s.*?(http.*)"rel.*\s.*?src="(.*?)".*\s.*\s.*\s.*\s.*\s.*\s.*bookmark"&gt;(.*?)&lt;</expres>
+      <expres><![CDATA[
+      post-thumbnail"><a href="(.*?)".*?src="(.*?)".*?rel="bookmark">(.*?)<
+      ]]></expres>
       <page>http://pubfilm.com/tag/animation/page/[showPages.param1]</page>
 </regex>
 
