@@ -135,3 +135,14 @@ return m3u8
 
 </item>
 
+<item>
+<title>[COLOR red]Offline[/COLOR] NINE</title>
+<link>https://9nowlivehls-i.akamaihd.net/hls/live/226645/ch9perprd/master.m3u8|X-Forwarded-For=14.137.213.255</link>
+<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/MR%20Network%20TV/9_zpsiex3yoka.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR red]Offline[/COLOR] RACING</title>
+<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224825/MISC1/master.m3u8|X-Forwarded-For=124.168.86.122</link>
+<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/MR%20Network%20TV/9_zpsiex3yoka.png</thumbnail>
+</item>
