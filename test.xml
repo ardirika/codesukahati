@@ -1,6 +1,6 @@
 <item>
 <title>TV3-1</title>
-<link>$doregex[m3u8]|Referer=http://player.ooyala.com/static/v4/stable/4.3.3/video-plugin/bitdashplayer.swf&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
+<link>$doregex[m3u8]|Referer=http://player.ooyala.com/player.swf?player=dde0012b6dcc4dc7b26306bdaff0dce2&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
 <regex>
 <name>m3u8</name>
  
@@ -34,7 +34,7 @@ return m3u8
 <link>plugin://plugin.video.f4mTester/?streamtype=HDS&amp;maxbitrate=1264000&amp;url=$doregex[get-encoded-url]</link>
  <regex>
   <name>get-encoded-url</name>
-  <expres>$pyFunction:urllib.quote_plus('http://tv3flashsecure-lh.akamaihd.net/z/tv3flash_sp@392287/manifest.f4m?hdnea=$doregex[token]&amp;hdcore=2.10.3&amp;g=MFULKRPDFPDH')</expres>
+  <expres>$pyFunction:urllib.quote_plus('http://tv3flashsecure-lh.akamaihd.net/z/tv3flash_sp@392287/manifest.f4m?hdnea=$doregex[token]&amp;hdcore=2.10.3&amp;g=VVGOXWGIYMCS')</expres>
  </regex>
  <regex>
   <name>token</name>
@@ -50,7 +50,7 @@ return m3u8
 	r = session.get('http://www.tonton.com.my/vindicia/playerOTP?id=J3ZmNmeDpV1EMWlR6YJU_YDCqKbh_bSg', headers=headers)
 	token = re.findall(r'"token":"(.*?)"', r.text)[0].replace('\/', '/')
 	r = session.get(token, headers=headers)
-	headers = {'Referer': 'http://player.ooyala.com/static/v4/stable/4.3.3/video-plugin/bitdashplayer.swf',
+	headers = {'Referer': 'http://player.ooyala.com/static/cacheable/a749e376b1fadc6784b96bd76a37692d/player_v2.swf?player=dde0012b6dcc4dc7b26306bdaff0dce2',
 	           'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25'}
 	r = session.get('http://player.ooyala.com/sas/akamai_edge_auth_token?embed_code=J3ZmNmeDpV1EMWlR6YJU_YDCqKbh_bSg&amp;video_pcode=owMjgyOkSbJagb4ozVY_03UrHYLt', headers=headers)
 	return r.text
@@ -59,159 +59,30 @@ return m3u8
 </item>
 
 <item>
-<title>Animation at Pubfilm</title>
-<link>$doregex[showPages]</link>
+<title>TV3-2</title>
+<link>plugin://plugin.video.f4mTester/?&amp;url=$doregex[get-encoded-url]</link>
+ <regex>
+  <name>get-encoded-url</name>
+  <expres>$pyFunction:urllib.quote_plus('http://tv3flashsecure-lh.akamaihd.net/z/tv3flash_sp@392287/manifest.f4m?hdnea=$doregex[token]&amp;hdcore=2.10.3&amp;g=VVGOXWGIYMCS')</expres>
+ </regex>
+ <regex>
+  <name>token</name>
+  <expres><![CDATA[#$pyFunction
+  def GetLSProData(page_data, Cookie_Jar, m):
+	import requests
+	import re
 
-<regex>
-      <name>makelist</name>
-      <listrepeat><![CDATA[
-               <title>[makelist.param3]</title>
-               <link>$doregex[finalURL]</link>
-               <thumbnail>[makelist.param2]</thumbnail>
-      ]]></listrepeat>
-      <expres><![CDATA[
-      post-thumbnail"><a href="(.*?)".*?src="(.*?)".*?rel="bookmark">(.*?)<
-      ]]></expres>
-      <page>http://pubfilm.com/tag/animation/page/[showPages.param1]</page>
-</regex>
-
-<regex>
-      <name>getPageNumbers</name>
-      <expres><![CDATA[#$pyFunction
-      import re
-      def GetLSProData(page_data,Cookie_Jar,m):
-      topage = re.findall('Page 1 of (.*?)<',page_data)[0]
-      frompage = int(1)
-      topage = int(topage)+1
-      print range(frompage,topage)
-      return range(frompage,topage)
-      ]]></expres>
-      <page>http://pubfilm.com/tag/animation</page>
-      <agent>Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</agent>
-      <cookieJar></cookieJar>
-</regex>
-
-<regex>
-      <name>showPages</name>
-      <listrepeat><![CDATA[
-               <title>Page = [showPages.param1]</title>
-               <link>$doregex[makelist]</link>
-      ]]></listrepeat>
-      <expres>([0-9]+),?</expres>
-      <page>$doregex[getPageNumbers]</page>
-      <agent>Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</agent>
-      <cookieJar></cookieJar>
-</regex>
-
-<regex>
-    <name>finalURL</name>
-    <expres>$pyFunction: '$doregex[720]' if not '$doregex[720]'=='' else '$doregex[480]'</expres>
-    <page></page>
-</regex>
-
-<regex>
-      <name>720</name>
-      <expres>file":"([^"]+)","type":"mp4","label":"720p"<expres>
-      <page>$doregex[get-api]</page>
-      <referer>[makelist.param1]</referer>
-      <cookieJar></cookieJar>
-</regex>
-
-<regex>
-      <name>480</name>
-      <expres>file":"([^"]+)","type":"mp4","label":"480p"<expres>
-      <page>$doregex[get-api]</page>
-      <referer>[makelist.param1]</referer>
-      <cookieJar></cookieJar>
-</regex>
-
-<regex>
-      <name>get-api</name>
-      <expres>href=[",'](.*?)[",']<expres>
-      <page>[makelist.param1]</page>
-      <referer>http://pubfilm.com/tag/animation/page/[showPages.param1]</referer>
-      <cookieJar></cookieJar>
-</regex>
-
+	session = requests.session()
+	headers = {"User-Agent": "Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25",
+	           "Referer": "http://www.tonton.com.my/login",
+	           "Connection": "keep-alive"}
+	r = session.get('http://www.tonton.com.my/vindicia/playerOTP?id=J3ZmNmeDpV1EMWlR6YJU_YDCqKbh_bSg', headers=headers)
+	token = re.findall(r'"token":"(.*?)"', r.text)[0].replace('\/', '/')
+	r = session.get(token, headers=headers)
+	headers = {'Referer': 'http://player.ooyala.com/static/cacheable/a749e376b1fadc6784b96bd76a37692d/player_v2.swf?player=dde0012b6dcc4dc7b26306bdaff0dce2',
+	           'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25'}
+	r = session.get('http://player.ooyala.com/sas/akamai_edge_auth_token?embed_code=J3ZmNmeDpV1EMWlR6YJU_YDCqKbh_bSg&amp;video_pcode=owMjgyOkSbJagb4ozVY_03UrHYLt', headers=headers)
+	return r.text
+  ]]></expres>
+ </regex>
 </item>
-
-<item>
-<title>[COLOR red]Offline[/COLOR] NINE</title>
-<link>https://9nowlivehls-i.akamaihd.net/hls/live/226645/ch9perprd/master.m3u8|X-Forwarded-For=14.137.213.255</link>
-<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/MR%20Network%20TV/9_zpsiex3yoka.png</thumbnail>
-</item>
-
-<item>
-<title>[COLOR red]Offline[/COLOR] NINE</title>
-<link>https://9nowlivehls-i.akamaihd.net/hls/live/226644/ch9melprd/master.m3u8|X-Forwarded-For=124.168.86.122</link>
-<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/MR%20Network%20TV/9_zpsiex3yoka.png</thumbnail>
-</item>
-
-<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<item>
-<title>ALL MOVIES & TV SHOWS</title>
-<link>$doregex[makelist]</link>
-<regex>
-      <name>makelist</name>
-      <listrepeat><![CDATA[
-               <title>[makelist.param2]</title>
-               <link>$doregex[makelist2]</link>
-               <thumbnail></thumbnail>
-      ]]></listrepeat>
-      <expres><![CDATA[mega-links-head"  href="\/tag\/(.*?)">(.*?)<\/a]]><expres>
-      <page>http://pubfilm.com/</page>
-      <cookieJar></cookieJar>
-</regex>>
-
-<regex>
-      <name>makelist2</name>
-      <listrepeat><![CDATA[
-               <title>Page [makelist2.param1]</title>
-               <link>$doregex[makelist3]</link>
-               <thumbnail></thumbnail>
-      ]]></listrepeat>
-      <expres>([0-9]+),?</expres>
-      <page>http://pubfilm.com/tag/[makelist.param1]</page>
-</regex>
-
-<regex>
-      <name>makelist3</name>
-      <listrepeat><![CDATA[
-               <title>[makelist3.param4] ([makelist3.param1] )</title>
-               <link>$doregex[finalURL]</link>
-               <thumbnail>[makelist3.param2]</thumbnail>
-      ]]></listrepeat>
-      <expres><![CDATA[f_tag">(.*?)<\/.*\n.*\n.*\n.*src="([^"]*)".*\n.*\n.*\n.*\n.*post-box-title"><a href="([^"]*)".*?>(.*?)<\/a]]></expres>
-      <page>http://pubfilm.com/tag/[makelist.param1]/page/[makelist2.param1]</page>
-</regex>
-
-<regex>
-    <name>finalURL</name>
-    <expres>$pyFunction: '$doregex[720]' if not '$doregex[720]'=='' else '$doregex[480]'</expres>
-    <page></page>
-</regex>
-<regex>
-      <name>720</name>
-      <expres>file":"([^"]+)","type":"mp4","label":"[6-7]<expres>
-      <page>$doregex[get-api]</page>
-      <referer>[makelist3.param3]</referer>
-      <cookieJar></cookieJar>
-</regex>
-<regex>
-      <name>480</name>
-      <expres>file":"([^"]+)","type":"mp4","label":"[4-5]<expres>
-      <page>$doregex[get-api]</page>
-      <referer>[makelist3.param3]</referer>
-      <cookieJar></cookieJar>
-</regex>
-<regex>
-      <name>get-api</name>
-      <expres>href=[",'](http.*\/api\/player\.php.*?)[",']<expres>
-      <page>[makelist3.param3]</page>
-      <referer>http://pubfilm.com/</referer>
-      <cookieJar></cookieJar>
-</regex>
-<thumbnail></thumbnail>
-</item>
-
-</items>
