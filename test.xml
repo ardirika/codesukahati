@@ -86,3 +86,15 @@ return m3u8
   ]]></expres>
  </regex>
 </item>
+
+<item>
+<title>BaliTV</title>
+<link>http://edge.telin.swiftserve.com/live/sejXc8RhId_livetv-sbr/0e3e49d9f128/chunklist.m3u8?stime=20160712140000&amp;etime=20160712180000&amp;encoded=02a4511d10f398923d054&amp;</link>
+<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/MR%20Network%20TV/balitv_zpsyfmtsnjk.png</thumbnail>
+</item>
+
+<item>
+<title>JogjaTV</title>
+<link>rtmp://202.169.224.206/live playpath=jogjatv swfUrl=http://streaming.jogjamedianet.com/jwplayer.swf pageUrl=http://jogjatv.tv/live-streaming/</link>
+<thumbnail>http://i376.photobucket.com/albums/oo204/indiecrew/MR%20Network%20TV/jogjatv_zpseylfsdy9.png</thumbnail>
+</item>
