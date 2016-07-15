@@ -123,3 +123,23 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
 <title>LeTV 1080播不停</title>
 <link>http://live.gslb.letv.com/gslb?stream_id=lb_1080P_1080p3m&amp;tag=live&amp;ext=m3u8&amp;sign=live_tv&amp;platid=10&amp;splatid=1009&amp;format=letv&amp;expect=1</link>
 </item>
+
+<item>
+<title>SBS</title>
+<link>rtmp://nlive.sbs.co.kr/sbsch6pc?u=sbs&amp;type=asp&amp;q=KDE3W39xAXF9fnZTfXACcHhwSmwsJUJ6fWd3SH1vAA%3D%3D playpath=sbs1ch63.stream swfUrl=http://vod.sbs.co.kr/onair/NeTVOnAir_1_4_1.swf?url=http://sbsplayer.sbs.co.kr/OnAir/env/SBS.xml?controlSetting=YYYYNNNNY&amp;rn=0 pageUrl=http://live.64ma.com:1930/tv/html/flv.asp?code=vEYgegtLRi0tR8Lmj8o98sLBNTmkP4EgeT0kU2E6UCGhXRcTPaMhULEne7ItUuEnez0xU20xen1hXxmjAGKBe9ckearniV5QNFo6UxmdugNdesJ9qTrmvpcqDH0kRj5m8iEne7IgUaEnez0xU20xen1hXtEgNarnigNdeS1</link>
+</item>
+
+<item>
+<title>SBS FUN E</title>
+<link>rtmp://nlive.sbs.co.kr/sbsetvpc?u=sbs&amp;type=asp&amp;q=KDE3W39xAXF9fnZTfXACfnl6SmwsJUJ6fWd3SH1vAA%3D%3D playpath=sbsetv3.stream swfUrl=http://vod.sbs.co.kr/onair/NeTVOnAir_1_4_1.swf?url=http://sbsplayer.sbs.co.kr/OnAir/env/ETV.xml?controlSetting=YYYYNNNNY&amp;rn=0 pageUrl=http://live.64ma.com:1930/tv/html/flv.asp?code=vEYgegtLRi0tR8Lmj8o98sLBNTmkP4EgeT0kU2E6UCGhXj5m5aMhULEne7ItUuEnez0xU20xen1hXxmjAGKBe9ckearniV5QNFo6UxmdugNdesJ9qTrmvpcqDH0kRj5m8iEne7IgUaEnez0xU20xen1hXtEgNarnigNdeS2</link>
+</item>
+
+<item>
+<title>SBS PLUS</title>
+<link>rtmp://nlive.sbs.co.kr/sbspluspc?u=sbs&amp;type=asp&amp;q=KDE3W39xAXF9fnZTfXADd3h6SmwsJUJ6fWd3SH1vAA%3D%3D playpath=sbsplus3.stream swfUrl=http://vod.sbs.co.kr/onair/NeTVOnAir_1_4_1.swf?url=http://sbsplayer.sbs.co.kr/OnAir/env/PLUS.xml?controlSetting=YYYYNNNNY&amp;rn=0 pageUrl=http://live.64ma.com:1930/tv/html/flv.asp?code=Ruschc80tRi0Pj8LmjEegU75QNL1IUacQNsEkM%2EVjUY0xPmKJPaMhULEne7ItUuEnez0xU20xen1hXxmjAGKBe9ckearniV5QNFo6UxmdugNdesJ9qTrmvpcqDH0kRj5m8iEne7IgUaEnez0xU20xen1hXtEgNarnigNdeS4</link>
+</item>
+
+<item>
+<title>SBS KNN</title>
+<link>rtmp://211.220.195.200:1935/live/mp4:KnnTv.stream</link>
+</item>
