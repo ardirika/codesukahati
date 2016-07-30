@@ -144,3 +144,12 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
 <link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224817/PER1/master.m3u8?|X-Forwarded-For=101.175.18.124</link>
 </item>
 
+<item>
+<title>7</title>
+<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224814/SYD1/master_high.m3u8|X-Forwarded-For=101.175.18.124</link>
+</item>
+
+<item>
+<title>7</title>
+<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224814/SYD1/master.m3u8|X-Forwarded-For=101.175.18.124</link>
+</item>
