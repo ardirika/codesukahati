@@ -140,66 +140,76 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
 </item>
 
 <item>
-<title>7</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224838/MISC2/master.m3u8?|X-Forwarded-For=101.175.18.124</link>
-</item>
-
-<item>
-<title>10</title>
-<link>http://mrdo.zapto.org:1088/aulive/tensouth/index.m3u8</link>
-</item>
-
-<item>
-<title>10</title>
-<link>http://csm-e.cds1.yospace.com/csm/extlive/networkten01,SDTEN.m3u8?|X-Forwarded-For=101.175.18.124</link>
+<title>abc</title>
+<link>plugin://plugin.video.f4mTester/?&amp;url=http://bponlinehdslive267.ngcdn.telstra.com/hds-live/bp/_definst_/bpsf-pc-000-c3002-fmspkg1-hdsogg1-abr/bpsf-pc-000-c3002-fmspkg1-hdsogg1-abr3.f4m?IS=0&amp;ET=1446577201&amp;CIP=1.2.3.4&amp;KO=1&amp;KN=7&amp;US=b032c5afd259a172cd037211b775ed33</link>
 </item>
 
 <item>
 <title>7</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224814/SYD1/master.m3u8?|X-Forwarded-For=101.175.18.124</link>
+<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224814/SYD1/master.m3u8?__nn__=4502508189001&amp;hdnea=st=1446115500~exp=1446117300~acl=/hls/live/224814/*~hmac=757ff18a59c73a734c7e5dbe4dd1fb81861d222b3296e4a71312f7072916d815|X-Forwarded-For=101.175.18.124</link>
 </item>
 
 <item>
 <title>72</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224827/SYD2/master.m3u8?|X-Forwarded-For=101.175.18.124</link>
+<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224827/SYD2/master.m3u8?__nn__=4502508189001&amp;hdnea=st=1446124500~exp=1446126300~acl=/hls/live/224827/*~hmac=99d6131242d3d6712998ebc6339b1d99c61312c1bb5f4a5e985c2a6e69e7e605|X-Forwarded-For=101.175.18.124</link>
 </item>
 
 <item>
 <title>7m</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224840/SYD3/master.m3u8?|X-Forwarded-For=101.175.18.124</link>
+<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224840/SYD3/master.m3u8?__nn__=4502508189001&amp;hdnea=st=1446124500~exp=1446126300~acl=/hls/live/224840/*~hmac=29cc7d919bdae64f4601b0135ff4ee359ffa34cd8446c609c644baf31dff116d|X-Forwarded-For=101.175.18.124</link>
 </item>
 
 <item>
 <title>7f</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224857/SYD6/master.m3u8?|X-Forwarded-For=101.175.18.124</link>
+<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224857/SYD6/master.m3u8?__nn__=4502508189001&amp;hdnea=st=1446115500~exp=1446117300~acl=/hls/live/224814/*~hmac=757ff18a59c73a734c7e5dbe4dd1fb81861d222b3296e4a71312f7072916d815|X-Forwarded-For=101.175.18.124</link>
 </item>
 
 <item>
-<title>9</title>
-<link>https://9nowch9livehls-i.akamaihd.net/hls/live/250964/sydney/master.m3u8?|X-Forwarded-For=101.175.18.124</link>
+<title>rc</title>
+<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224825/MISC1/master.m3u8?__nn__=4502508189001&amp;hdnea=st=1446115500~exp=1446117300~acl=/hls/live/224825/*~hmac=a30fb75300807201339e57fd0f4f30f2fdbdb13f56c4f7649228e34059d079e4|X-Forwarded-For=101.175.18.124</link>
 </item>
 
 <item>
-<title>9</title>
-<link>https://9nowch9livehls-i.akamaihd.net/hls/live/250964/sydney/master1800.m3u8?|X-Forwarded-For=101.175.18.124</link>
+<title>tv3</title>
+<link>http://mworks-i.akamaihd.net/hls/live/247858/AES128/3812193411001/tv3_live/master_2000.m3u8|X-Forwarded-For=202.150.115.76</link>
 </item>
 
 <item>
-<title>9Gem</title>
-<link>https://9nowlivehls-i.akamaihd.net/hls/live/238023/gemsydprd/master1800.m3u8|X-Forwarded-For=101.175.18.124</link>
+<title>tv3</title>
+<link>http://mediaworkshdlive-lh.akamaihd.net/3news_live_1500@172627|X-Forwarded-For=202.150.115.76</link>
 </item>
 
 <item>
-<title>9Go</title>
-<link>https://9nowlivehls-i.akamaihd.net/hls/live/238028/gosydprd/master1800.m3u8|X-Forwarded-For=101.175.18.124</link>
+<title>tv3</title>
+<link>http://mediaworks-i.akamaihd.net/hls/live/220435/3812193411001/3news_live/master.m3u8|X-Forwarded-For=202.150.115.76</link>
 </item>
 
 <item>
-<title>9L</title>
-<link>https://9nowlivehls-i.akamaihd.net/hls/live/238033/lifesydprd/master1800.m3u8|X-Forwarded-For=101.175.18.124</link>
+<title>bravo</title>
+<link>http://mworks-i.akamaihd.net/hls/live/251979/AES128/3812193411001/Bravo_Live/master.m3u8|X-Forwarded-For=202.150.115.76</link>
 </item>
 
 <item>
-<title>7a</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224814/SYD1/master_high.m3u8&amp;bitrate=800&amp;pass=Skype&amp;type=livestream&amp;rebase=on&amp;plugin_m3u8=http://iptvlivestream.com/tamtvizle/hls_plugin.swf</link>
+<title>The Edge</title>
+<link>http://mediaworkshdlive-lh.akamaihd.net/theedgetv_live_1500@172627|X-Forwarded-For=202.150.115.76</link>
+</item>
+
+<item>
+<title>TVNZ Duke</title>
+<link>https://tvnzioslive01-i.akamaihd.net/hls/live/245926/tvnzhlsingest/Duke/playlistR_55.m3u8</link>
+</item>
+
+<item>
+<title>TVNZ Duke</title>
+<link>https://tvnzioslive01-i.akamaihd.net/hls/live/245926/tvnzhlsingest/Duke/playlistR_55.m3u8</link>
+</item>
+
+<item>
+<title>Canterbury TV’s channel</title>
+<link>http://scc-cdn.5stream.com/stream/stream_med/index.m3u8</link>
+</item>
+
+<item>
+<title>The Edge</title>
+<link>http://mediaworks-i.akamaihd.net/hls/live/220435/3812193411001/theedgetv_live/master.m3u8</link>
 </item>
