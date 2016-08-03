@@ -170,190 +170,6 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
 </item>
 
 <item>
-<title>ABS-CBN</title>
-<link>rtmp://watch1.streamlive.to:1935/edge app=edge/_definst_/$doregex[xs] playpath=$doregex[path] swfVfy=1 token=$doregex[tok] swfUrl=https://www.streamlive.to/ads/streamlive.swf pageUrl=https://www.streamlive.to live=1 timeout=15</link>
-<regex>
-	<name>path</name>
-	<expres>file: "(.*).flv</expres>
-	<page>https://www.streamlive.to/view/62243</page>
-</regex>
-<regex>
-	<name>tok</name>
-	<expres>token":"([^"]*)</expres>
-	<page>$doregex[tokpg]</page>
-	<referer>https://www.streamlive.to</referer>
-</regex>
-<regex>
-	<name>tokpg</name>
-	<expres>getJSON\("([^"]*)</expres>
-	<page>https://www.streamlive.to/view/62243</page>
-</regex>
-<regex>
-	<name>xs</name>
-	<expres>/(\?xs=.*?)"</expres>
-	<page>https://www.streamlive.to/view/62243</page>
-	<rawpost>captcha=$doregex[answer]</rawpost>
-	<referer>https://www.streamlive.to</referer>
-	<cookieJar></cookieJar>
-	<ignorecache/>
-</regex>
-<regex>
-	<name>answer</name>
-	<expres>$pyFunction:($doregex[captcha])</expres>
-	<page></page>
-</regex>
-<regex>
-	<name>captcha</name>
-	<expres>$pyFunction:'$doregex[xcaptcha]'.replace('x','*')</expres>
-	<page></page>
-</regex>
-<regex>
-	<name>xcaptcha</name>
-	<expres>Question: (.*) =</expres>
-	<page>https://www.streamlive.to/view/62243</page>
-	<referer>http://www.streamlive.to</referer>
-	<cookieJar></cookieJar>
-</regex>
-</item>
-
-<item>
-<title>GMA 7</title>
-<link>rtmp://watch1.streamlive.to:1935/edge app=edge/_definst_/$doregex[xs] playpath=$doregex[path] swfVfy=1 token=$doregex[tok] swfUrl=https://www.streamlive.to/ads/streamlive.swf pageUrl=https://www.streamlive.to live=1 timeout=15</link>
-<regex>
-	<name>path</name>
-	<expres>file: "(.*).flv</expres>
-	<page>https://www.streamlive.to/view/9098</page>
-</regex>
-<regex>
-	<name>tok</name>
-	<expres>token":"([^"]*)</expres>
-	<page>$doregex[tokpg]</page>
-	<referer>https://www.streamlive.to</referer>
-</regex>
-<regex>
-	<name>tokpg</name>
-	<expres>getJSON\("([^"]*)</expres>
-	<page>https://www.streamlive.to/view/9098</page>
-</regex>
-<regex>
-	<name>xs</name>
-	<expres>/(\?xs=.*?)"</expres>
-	<page>https://www.streamlive.to/view/9098</page>
-	<rawpost>captcha=$doregex[answer]</rawpost>
-	<referer>https://www.streamlive.to</referer>
-	<cookieJar></cookieJar>
-	<ignorecache/>
-</regex>
-<regex>
-	<name>answer</name>
-	<expres>$pyFunction:($doregex[captcha])</expres>
-	<page></page>
-</regex>
-<regex>
-	<name>captcha</name>
-	<expres>$pyFunction:'$doregex[xcaptcha]'.replace('x','*')</expres>
-	<page></page>
-</regex>
-<regex>
-	<name>xcaptcha</name>
-	<expres>Question: (.*) =</expres>
-	<page>https://www.streamlive.to/view/9098</page>
-	<referer>http://www.streamlive.to</referer>
-	<cookieJar></cookieJar>
-</regex>
-</item>
-
-<item>
-<title>GMA 7 [COLOR red]Link 2[/COLOR]</title>
-<link>rtmp://66.55.92.71:1935/app playpath=pinoy-tambayans-channel swfUrl=https://streamup.com/assets/StreamupVideoChat.swf live=1 timeout=15 pageUrl=https://streamup.com/rooms/pinoy-tambayans-Channel/plugins/video/show?startMuted=false</link>
-</item>
-
-<item>
-<title>TV 5</title>
-<link>http://stream1.news5.ph/tv5/aksyon/playlist.m3u8</link>
-</item>
-
-<itemx>
-<title>Aksyon TV</title>
-<link>http://stream1.news5.ph/tv5/aksyon/playlist.m3u8</link>
-</itemx>
-
-<item>
-<title>People's Television</title>
-<link>plugin://plugin.video.youtube/play/?video_id=$doregex[id]</link>
-<regex>
-<name>id</name>
-<expres>data-context-item-id="([^"]+)<expres>
-<page>https://www.youtube.com/user/PTVPhilippines/featured</page>
-</regex>
-</item>
-
-<item>
-<title>People's Television [COLOR=red]Link 2[/COLOR]</title>
-<link>http://iphone-streaming.ustream.tv/ustreamVideo/9544987/streams/live/playlist.m3u8</link>
-</item>
-
-<item>
-<title>NET 25</title>
-<link>http://iphone-streaming.ustream.tv/ustreamVideo/12831564/streams/live/playlist.m3u8</link>
-</item>
-
-<item>
-<title>UNTV 37</title>
-<link>rtmp://livestream01.untvweb.com/public/ playpath=untvwebstream  swfUrl=http://www.untvweb.com/players/player.swf live=true timeout=15 pageUrl=http://www.untvweb.com/live-stream/</link>
-</item>
-
-<item>
-<title>TV Maria</title>
-<link>http://iphone-streaming.ustream.tv/ustreamVideo/10646391/streams/live/playlist.m3u8</link>
-</item>
-
-<item>
-<title>INC TV</title>
-<link>http://churchrus2-lh.akamaihd.net/i/COCTesting_1@57550/master.m3u8</link>
-</item>
-
-<item>
-<title>INC TV [COLOR=red]Link 2[/COLOR]</title>
-<link>plugin://plugin.video.f4mTester/?name=INCTV&amp;url=http%3A%2F%2Fchurchrus2-lh.akamaihd.net%2Fz%2FCOCTesting_1%4057550%2Fmanifest.f4m%3Fg%3DGOUBELWJIGIW%26hdcore%3D3.3.0&amp;mode=play</link>
-</item>
-
-<item>
-<title>Ang Dating Daan</title>
-<link>rtmp://ocatv.mcgi.me/vodtv playpath=247_tag swfUrl=http://angdatingdaan.org/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf live=true timeout=15 pageUrl=http://angdatingdaan.org/100player_tag.html</link>
-</item>
-
-<item>
-<title>The Old Path</title>
-<link>rtmp://ocatv.mcgi.me/public playpath=247_en  swfUrl=http://www.theoldpath.tv/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf live=true pageUrl=http://www.theoldpath.tv/</link>
-</item>
-
-<item>
-<title>RHTV</title>
-<link>rtsp://bayantel-ss.dagupan.com/dzrhvideo</link>
-</item>
-
-<item>
-<title>CLTV 36</title>
-<link>http://cltv36-lh.akamaihd.net/i/cltv36_1@300961/master.m3u8</link>
-</item>
-
-<item>
-<title>CLTV 36 [COLOR=red]Link 2[/COLOR]</title>
-<link>plugin://plugin.video.f4mTester/?name=CLTV+36&amp;url=http%3A%2F%2Fcltv36-lh.akamaihd.net%2Fz%2Fcltv36_1%40300961%2Fmanifest.f4m%3Fg%3DEQURJMOSLPIS%26hdcore%3D3.6.0%26plugin%3Djwplayer-3.6.0.0&amp;mode=play</link>
-</item>
-
-<item>
-<title>CLTV 36 [COLOR=red]Link 3[/COLOR]</title>
-<link>plugin://plugin.video.f4mTester/?name=CLTV+36&amp;url=http://cltv36-lh.akamaihd.net/z/cltv36_1@300961/manifest.f4m?g=EQURJMOSLPIS&amp;hdcore=3.6.0&amp;plugin=jwplayer-3.6.0.0</link>
-</item>
-
-<item>
-<title>CCTN 47</title>
-<link>http://iphone-streaming.ustream.tv/ustreamVideo/16474576/streams/live/playlist.m3u8</link>
-</item>
-
-<item>
 <title>[COLOR=yellow]PINOY RADIO >>>[/COLOR]</title>
 <link>.</link>
 </item>
@@ -401,4 +217,14 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
 <item>
 <title>DWIZ 882</title>
 <link>http://iphone-streaming.ustream.tv/ustreamVideo/3834592/streams/live/playlist.m3u8</link>
+</item>
+
+<item>
+<title>1</title>
+<link>http://tvenbcsn-i.Akamaihd.net/hls/live/218235/nbcsnx/4296k/prog.m3u8|X-Forwarded-For=209.239.112.104</link>
+</item>
+
+<item>
+<title>2</title>
+<link>http://wownet.ro/str/0402.m3u8|X-Forwarded-For=81.17.18.50</link>
 </item>
