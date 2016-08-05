@@ -220,11 +220,21 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
 </item>
 
 <item>
-<title>1</title>
-<link>http://tvenbcsn-i.Akamaihd.net/hls/live/218235/nbcsnx/4296k/prog.m3u8|X-Forwarded-For=209.239.112.104</link>
+<title>Channel 31 Fishing TV Melbourne</title>
+<link>http://manifester.mediafoundry.com.au/stream/c31melbourne_fishing/playlist.m3u8</link>
 </item>
 
 <item>
-<title>2</title>
-<link>http://wownet.ro/str/0402.m3u8|X-Forwarded-For=81.17.18.50</link>
+<title>abckids1</title>
+<link>http://abctvlivehls-lh.akamaihd.net/i/abckids_1@327097/master.m3u8|X-Forwarded-For=101.175.18.124</link>
+</item>
+
+<item>
+<title>abckids2</title>
+<link>http://abctvlivehds-lh.akamaihd.net/i/abckids_1@390083/master.m3u8|X-Forwarded-For=101.175.18.124</link>
+</item>
+
+<item>
+<title>abckids1</title>
+<link>plugin://plugin.video.f4mTester/?&amp;url=http://abctvlivehds-lh.akamaihd.net/z/abckids_1@390083/manifest.f4m</link>
 </item>
