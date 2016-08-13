@@ -235,11 +235,11 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
 </item>
 
 <item>
-<title>[COLOR turquoise]HT1[/COLOR] [COLOR skyblue](f4mTester)[/COLOR]</title>
-<link>plugin://plugin.video.f4mTester/?url=http://config.playwire.com/21772/videos/v2/5100848/manifest.f4m&amp;streamtype=TSDOWNLOADER|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
+  <title>[COLOR=cyan]RTM - Channel 1 (Olympic Games)[/COLOR] SD</title>
+  <link>http://d2pvap6btj9a99.cloudfront.net/smil:olimpik-1/chunklist_b644000_sleng.m3u8|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
 </item>
 
 <item>
-<title>[COLOR turquoise]HT2[/COLOR] [COLOR skyblue](f4mTester)[/COLOR]</title>
-<link>plugin://plugin.video.f4mTester/?url=http://config.playwire.com/21772/videos/v2/5100991/manifest.f4m&amp;streamtype=TSDOWNLOADER|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
+  <title>[COLOR=cyan]RTM - Channel 1 (Olympic Games)[/COLOR] SD</title>
+  <link>http://d2pvap6btj9a99.cloudfront.net/smil:olimpik-1/chunklist_b644000_sleng.m3u8|X-Forwarded-For=42.154.55.155&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
 </item>
