@@ -146,27 +146,27 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
 
 <item>
 <title>7</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224814/SYD1/master.m3u8?__nn__=4502508189001&amp;hdnea=st=1446115500~exp=1446117300~acl=/hls/live/224814/*~hmac=757ff18a59c73a734c7e5dbe4dd1fb81861d222b3296e4a71312f7072916d815|X-Forwarded-For=101.175.18.124</link>
+<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224813/MEL1/master.m3u8|X-Forwarded-For=101.175.18.124&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
 </item>
 
 <item>
 <title>72</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224827/SYD2/master.m3u8?__nn__=4502508189001&amp;hdnea=st=1446124500~exp=1446126300~acl=/hls/live/224827/*~hmac=99d6131242d3d6712998ebc6339b1d99c61312c1bb5f4a5e985c2a6e69e7e605|X-Forwarded-For=101.175.18.124</link>
+<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224826/MEL2/master.m3u8|X-Forwarded-For=101.175.18.124</link>
 </item>
 
 <item>
 <title>7m</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224840/SYD3/master.m3u8?__nn__=4502508189001&amp;hdnea=st=1446124500~exp=1446126300~acl=/hls/live/224840/*~hmac=29cc7d919bdae64f4601b0135ff4ee359ffa34cd8446c609c644baf31dff116d|X-Forwarded-For=101.175.18.124</link>
+<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224839/MEL3/master.m3u8|X-Forwarded-For=101.175.18.124</link>
 </item>
 
 <item>
 <title>7f</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224857/SYD6/master.m3u8?__nn__=4502508189001&amp;hdnea=st=1446115500~exp=1446117300~acl=/hls/live/224814/*~hmac=757ff18a59c73a734c7e5dbe4dd1fb81861d222b3296e4a71312f7072916d815|X-Forwarded-For=101.175.18.124</link>
+<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224856/MEL6/master.m3u8|X-Forwarded-For=101.175.18.124</link>
 </item>
 
 <item>
 <title>rc</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224825/MISC1/master.m3u8?__nn__=4502508189001&amp;hdnea=st=1446115500~exp=1446117300~acl=/hls/live/224825/*~hmac=a30fb75300807201339e57fd0f4f30f2fdbdb13f56c4f7649228e34059d079e4|X-Forwarded-For=101.175.18.124</link>
+<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224825/MISC1/master.m3u8|X-Forwarded-For=101.175.18.124</link>
 </item>
 
 <item>
@@ -225,8 +225,8 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
   <regex>
     <name>m3u8</name>
     <expres>file="([^\"]+)"</expres>
-    <page>http://cdn-rtm-player.gluempsapp.com/36000&amp;X-Forwarded-For=42.154.55.155</page>
-    <referer>http://cdn-rtm-player.gluempsapp.com/36000&amp;X-Forwarded-For=42.154.55.155</referer>
+    <page>http://cdn-rtm-player.gluempsapp.com/36000</page>
+    <referer>http://cdn-rtm-player.gluempsapp.com/36000</referer>
     <agent>Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</agent>
     <accept>*/*</accept>
     <cookieJar></cookieJar>
