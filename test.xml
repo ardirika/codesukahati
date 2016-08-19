@@ -136,7 +136,17 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
 
 <item>
 <title>abc</title>
-<link>plugin://plugin.video.f4mTester/?url=http://abcnews24livehds-lh.akamaihd.net/z/news24_1@321136/manifest.f4m?hdcore=true&amp;hdnea=st=1471223576~exp=1471233575~acl=/*~hmac=d885eaac877b33481454dba97cb5f5b8025c588fbe592011b0c5de5ac803ed68&amp;pvswf=http://iview.abc.net.au/assets/swf/cineramaWrapper_Acc_018.swf?version=0.2&amp;streamtype=TSDOWNLOADER|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
+<link>plugin://plugin.video.f4mTester/?streamtype=HDS&amp;maxbitrate=1264000&amp;url=$doregex[get-encoded-url]</link>
+<regex>
+  <name>get-encoded-url</name>
+  <expres>$pyFunction:urllib.quote_plus('http://abctvlivehds-lh.akamaihd.net/z/abc1_1@360322/manifest.f4m?hdcore=true&amp;hdnea=$doregex[token]&amp;hdcore=2.11.3&amp;g=QMJMRWFGQBTZ')</expres>
+</regex>
+<regex>
+  <name>token</name>
+  <expres>tokenhd>(.*?)</tokenhd</expres>
+  <page>http://iview.abc.net.au/auth/flash?1471617160584</page>
+  <referer>http://iview.abc.net.au/auth/flash?1471617160584</referer>
+</regex>
 </item>
 
 <item>
@@ -164,52 +174,3 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
 <link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224825/MISC1/master.m3u8|X-Forwarded-For=101.175.18.124</link>
 </item>
 
-<item>
-<title>[COLOR=yellow]PINOY RADIO >>>[/COLOR]</title>
-<link>.</link>
-</item>
-
-<item>
-<title>MOR 101.9 For Life</title>
-<link>rtmp://cp106256.live.edgefcs.net:443/live playpath=Tambayan1019@37120 swfUrl=http://admin.brightcove.com/viewer/us20130919.1302/federatedVideoUI/BrightcovePlayer.swf?uid=1379681106897 pageUrl=http://www.mor1019.com/home.aspx live=1 timeout=15</link>
-</item>
-
-<item>
-<title>Love Radio 90.7 Mhz</title>
-<link>http://50.7.70.130:8033/love-manila-web?type=.flv</link>
-</item>
-
-<item>
-<title>Yes FM 101.1</title>
-<link>http://icecast.eradioportal.com:8000/yesfm_manila</link>
-</item>
-
-<item>
-<title>CyberPinoy Radio</title>
-<link>http://cyberpinoyradio.net:8000</link>
-</item>
-
-<item>
-<title>Rakista Radio</title>
-<link>http://rakista.com:8000/listen128.mp3</link>
-</item>
-
-<item>
-<title>DZMM 630kHz</title>
-<link>rtmp://cp106256.live.edgefcs.net:443/live playpath=LS_DZMMAudio@88953 swfUrl=http://admin.brightcove.com/viewer/us20130919.1302/federatedVideoUI/BrightcovePlayer.swf?uid=1379676291319 pageUrl=http://dzmm.abs-cbnnews.com/page/audiostreaming.html live=1 timeout=15</link>
-</item>
-
-<item>
-<title>Radyo 5 News FM</title>
-<link>http://edge.pldt.swiftserve.com/live/mediascape/radyo5/playlist.m3u8</link>
-</item>
-
-<item>
-<title>Radyo Veritas</title>
-<link>http://phoenix-ss.dagupan.com/radyoveritas</link>
-</item>
-
-<item>
-<title>DWIZ 882</title>
-<link>http://iphone-streaming.ustream.tv/ustreamVideo/3834592/streams/live/playlist.m3u8</link>
-</item>
