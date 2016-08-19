@@ -135,11 +135,11 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
 </item>
 
 <item>
-<title>abc1</title>
-<link>plugin://plugin.video.f4mTester/?streamtype=HDS&amp;maxbitrate=1264000&amp;url=$doregex[get-encoded-url]|X-Forwarded-For=101.175.18.124</link>
+<title>abc-1</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HDS&amp;maxbitrate=1264000&amp;url=$doregex[get-encoded-url]</link>
 <regex>
   <name>get-encoded-url</name>
-  <expres>$pyFunction:urllib.quote_plus('http://abctvlivehds-lh.akamaihd.net/z/abc1_1@360322/manifest.f4m?hdcore=true&amp;hdnea=st=$doregex[token]&amp;hdcore=2.11.3&amp;g=QMJMRWFGQBTZ')</expres>
+  <expres>$pyFunction:urllib.quote_plus('http://abctvlivehds-lh.akamaihd.net/z/abc1_1@360322/manifest.f4m?hdcore=true&amp;hdnea=st=$doregex[token]&amp;hdcore=2.11.3&amp;g=QMJMRWFGQBTZ|X-Forwarded-For=101.175.18.124')</expres>
 </regex>
 <regex>
   <name>token</name>
