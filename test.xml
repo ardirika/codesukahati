@@ -150,6 +150,11 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
 </item>
 
 <item>
+<title>abc2</title>
+<link>rtmp://cp81899.live.edgefcs.net/live/ playpath=news24-hi@28773 swfUrl=http://iview.abc.net.au/assets/swf//images/nc.jpg pageUrl=http://iview.abc.net.au/programs/abc-news-24/NS1413V001S00|X-Forwarded-For=101.175.18.124</link>
+</item>
+
+<item>
 <title>7</title>
 <link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224813/MEL1/master.m3u8|X-Forwarded-For=101.175.18.124&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
 </item>
