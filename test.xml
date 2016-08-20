@@ -106,26 +106,26 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
 </item>
 
 <item>
-<title>abc</title>
-<link>plugin://plugin.video.f4mTester/?&amp;url=$doregex[get-encoded-url]&amp;streamtype=TSDOWNLOADER</link>
+<title>abc1</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HDS&amp;maxbitrate=1264000&amp;url=$doregex[get-encoded-url]</link>
 <regex>
   <name>get-encoded-url</name>
-  <expres>$pyFunction:urllib.quote_plus('http://abctvlivehds-lh.akamaihd.net/z/abc1_1@360322/manifest.f4m?hdcore=true&amp;hdnea=$doregex[token]&amp;hdcore=2.11.3&amp;g=QMJMRWFGQBTZ&amp;pvswf=http://iview.abc.net.au/assets/swf/cineramaWrapper_Acc_018.swf?version=0.2')</expres>
+  <expres>$pyFunction:urllib.quote_plus('http://abctvlivehds-lh.akamaihd.net/z/abc1_1@360322/manifest.f4m?hdcore=true&amp;hdnea=$doregex[token]&amp;hdcore=2.11.3&amp;g=QMJMRWFGQBTZ')</expres>
 </regex>
 <regex>
-<name>token</name>
-<expres><![CDATA[#$pyFunction
-def GetLSProData(page_data,Cookie_Jar,m):
-import re
-import requests
-import urllib2
-url = 'http://iview.abc.net.au/auth/flash/'
-source = requests.get(url)
-token = re.findall('<tokenhd>(.*?)</tokenhd>', source.text)[0]
-return token
-]]></expres>
-<page></page>
-<referer></referer>
+ <name>token</name>
+ <expres><![CDATA[#$pyFunction
+ def GetLSProData(page_data,Cookie_Jar,m):
+ import re
+ import requests
+ import urllib2
+ url = 'http://iview.abc.net.au/auth/flash/'
+ source = requests.get(url)
+ token = re.findall('tokenhd>(.*?)</tokenhd', source.text)[0]
+ return token
+ ]]></expres>
+ <page></page>
+ <referer></referer>
 </regex>
 </item>
 
