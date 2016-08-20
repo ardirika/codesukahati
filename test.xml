@@ -1,71 +1,4 @@
 <item>
-<title>TV3-1</title>
-<link>$doregex[m3u8]|Referer=http://player.ooyala.com/player.swf?player=dde0012b6dcc4dc7b26306bdaff0dce2&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
-<regex>
-<name>m3u8</name>
- 
-<expres><![CDATA[#$pyFunction
-def GetLSProData(page_data,Cookie_Jar,m):
-import re
-import base64
-import requests
-import urllib2
-url = 'http://www.tonton.com.my/vindicia/playerOTP?id=J3ZmNmeDpV1EMWlR6YJU_YDCqKbh_bSg'
-source = requests.get(url)
-jsontoken = re.findall('token":"(.*?)"', source.text)[0]
-token = jsontoken.replace('\/','/')
-source1 = requests.get(token)
-cookie1 = source1.cookies['auth_tokens_1']
-url2 = 'http://player.ooyala.com/sas/player_api/v2/authorization/embed_code/owMjgyOkSbJagb4ozVY_03UrHYLt/J3ZmNmeDpV1EMWlR6YJU_YDCqKbh_bSg?device=android&amp;domain=player.ooyala.com'
-cookies ={'auth_tokens_1': cookie1}
-source2 = requests.get(url2, cookies=cookies)
-encodeddata = re.findall('data":"(.*?)"', source2.text)[0]
-m3u8 = base64.b64decode(encodeddata)
-return m3u8
-]]></expres>
- 
-<page></page>
-<referer></referer>
-</regex>
-</item>
-
-<item>
-<title>TV3-2</title>
-<link>plugin://plugin.video.f4mTester/?streamtype=HDS&amp;maxbitrate=1264000&amp;url=$doregex[get-encoded-url]</link>
- <regex>
-  <name>get-encoded-url</name>
-  <expres>$pyFunction:urllib.quote_plus('http://tv3flashsecure-lh.akamaihd.net/z/tv3flash_sp@392287/manifest.f4m?hdnea=$doregex[token]&amp;hdcore=2.10.3&amp;g=VVGOXWGIYMCS')</expres>
- </regex>
- <regex>
-  <name>token</name>
-  <expres><![CDATA[#$pyFunction
-  def GetLSProData(page_data, Cookie_Jar, m):
-	import requests
-	import re
-
-	session = requests.session()
-	headers = {"User-Agent": "Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25",
-	           "Referer": "http://www.tonton.com.my/login",
-	           "Connection": "keep-alive"}
-	r = session.get('http://www.tonton.com.my/vindicia/playerOTP?id=J3ZmNmeDpV1EMWlR6YJU_YDCqKbh_bSg', headers=headers)
-	token = re.findall(r'"token":"(.*?)"', r.text)[0].replace('\/', '/')
-	r = session.get(token, headers=headers)
-	headers = {'Referer': 'http://player.ooyala.com/static/cacheable/a749e376b1fadc6784b96bd76a37692d/player_v2.swf?player=dde0012b6dcc4dc7b26306bdaff0dce2',
-	           'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25'}
-	r = session.get('http://player.ooyala.com/sas/akamai_edge_auth_token?embed_code=J3ZmNmeDpV1EMWlR6YJU_YDCqKbh_bSg&amp;video_pcode=owMjgyOkSbJagb4ozVY_03UrHYLt', headers=headers)
-	return r.text
-  ]]></expres>
- </regex>
-</item>
-
-<item>
-<title>tv3</title>
-<link>http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master.m3u8|X-Forwarded-For=42.154.55.155&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
-</item>
-http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1001.m3u8
-http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
-
-<item>
 <title>耀才財經台</title>
 <link>http://202.69.67.66:443/webcast/bshdlive-pc/playlist.m3u8</link>
 </item>
@@ -107,7 +40,7 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
 
 <item>
 <title>abc1</title>
-<link>plugin://plugin.video.f4mTester/?streamtype=HDS&amp;maxbitrate=1264000&amp;url=$doregex[get-encoded-url]</link>
+<link>plugin://plugin.video.f4mTester/?streamtype=HDS&amp;maxbitrate=1264000&amp;url=$doregex[get-encoded-url]|X-Forwarded-For=203.164.47.122&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
 <regex>
   <name>get-encoded-url</name>
   <expres>$pyFunction:urllib.quote_plus('http://abctvlivehds-lh.akamaihd.net/z/abc1_1@360322/manifest.f4m?hdcore=true&amp;hdnea=$doregex[token]&amp;hdcore=2.11.3&amp;g=QMJMRWFGQBTZ')</expres>
@@ -128,29 +61,4 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
  <referer></referer>
 </regex>
 </item>
-
-<item>
-<title>7</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224813/MEL1/master.m3u8|X-Forwarded-For=101.175.18.124&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
-</item>
-
-<item>
-<title>72</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224826/MEL2/master.m3u8|X-Forwarded-For=101.175.18.124</link>
-</item>
-
-<item>
-<title>7m</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224839/MEL3/master.m3u8|X-Forwarded-For=101.175.18.124</link>
-</item>
-
-<item>
-<title>7f</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224856/MEL6/master.m3u8|X-Forwarded-For=101.175.18.124</link>
-</item>
-
-<item>
-<title>rc</title>
-<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224825/MISC1/master.m3u8|X-Forwarded-For=101.175.18.124</link>
-</item>
-
+	
