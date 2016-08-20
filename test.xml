@@ -59,35 +59,6 @@ return m3u8
 </item>
 
 <item>
-<title>TV3-2</title>
-<link>plugin://plugin.video.f4mTester/?&amp;url=$doregex[get-encoded-url]</link>
- <regex>
-  <name>get-encoded-url</name>
-  <expres>$pyFunction:urllib.quote_plus('http://tv3flashsecure-lh.akamaihd.net/z/tv3flash_sp@392287/manifest.f4m?hdnea=$doregex[token]&amp;hdcore=2.10.3&amp;g=IBMQRVRXGOBD')</expres>
- </regex>
- <regex>
-  <name>token</name>
-  <expres><![CDATA[#$pyFunction
-  def GetLSProData(page_data, Cookie_Jar, m):
-	import requests
-	import re
-
-	session = requests.session()
-	headers = {"User-Agent": "Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25",
-	           "Referer": "http://www.tonton.com.my/login",
-	           "Connection": "keep-alive"}
-	r = session.get('http://www.tonton.com.my/vindicia/playerOTP?id=J3ZmNmeDpV1EMWlR6YJU_YDCqKbh_bSg', headers=headers)
-	token = re.findall(r'"token":"(.*?)"', r.text)[0].replace('\/', '/')
-	r = session.get(token, headers=headers)
-	headers = {'Referer': 'http://player.ooyala.com/static/cacheable/a749e376b1fadc6784b96bd76a37692d/player_v2.swf?player=dde0012b6dcc4dc7b26306bdaff0dce2',
-	           'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25'}
-	r = session.get('http://player.ooyala.com/sas/akamai_edge_auth_token?embed_code=J3ZmNmeDpV1EMWlR6YJU_YDCqKbh_bSg&amp;video_pcode=owMjgyOkSbJagb4ozVY_03UrHYLt', headers=headers)
-	return r.text
-  ]]></expres>
- </regex>
-</item>
-
-<item>
 <title>tv3</title>
 <link>http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master.m3u8|X-Forwarded-For=42.154.55.155&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
 </item>
@@ -136,22 +107,26 @@ http://tv3iossecure-i.akamaihd.net/hls/live/225715/ios/tv3ios_sp/master1002.m3u8
 
 <item>
 <title>abc1</title>
-<link>plugin://plugin.video.f4mTester/?&amp;url=$doregex[get-encoded-url]&amp;streamtype=TSDOWNLOADER|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
+<link>plugin://plugin.video.f4mTester/?&amp;url=$doregex[get-encoded-url]&amp;streamtype=TSDOWNLOADER</link>
 <regex>
   <name>get-encoded-url</name>
-  <expres>$pyFunction:urllib.quote_plus('http://abctvlivehds-lh.akamaihd.net/z/abc1_1@360322/manifest.f4m?hdcore=true&amp;hdnea=st=$doregex[token]&amp;hdcore=2.11.3&amp;g=QMJMRWFGQBTZ|X-Forwarded-For=101.175.18.124')</expres>
+  <expres>$pyFunction:urllib.quote_plus('http://abctvlivehds-lh.akamaihd.net/z/abc1_1@360322/manifest.f4m?hdcore=true&amp;hdnea=st=$doregex[token]&amp;hdcore=2.11.3&amp;g=QMJMRWFGQBTZ&amp;pvswf=http://iview.abc.net.au/assets/swf/cineramaWrapper_Acc_018.swf?version=0.2')</expres>
 </regex>
 <regex>
-  <name>token</name>
-  <expres>st=(.*?)</expres>
-  <page>http://iview.abc.net.au/auth/flash?1471617160584</page>
-  <referer>http://iview.abc.net.au/auth/flash?1471617160584</referer>
+<name>token</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+import re
+import requests
+import urllib2
+url = 'http://iview.abc.net.au/auth/flash/'
+source = requests.get(url)
+token = re.findall('<tokenhd>(.*?)</tokenhd>', source.text)[0]
+return token
+]]></expres>
+<page></page>
+<referer></referer>
 </regex>
-</item>
-
-<item>
-<title>abc2</title>
-<link>rtmp://cp81899.live.edgefcs.net/live/ playpath=news24-hi@28773 swfUrl=http://iview.abc.net.au/assets/swf//images/nc.jpg pageUrl=http://iview.abc.net.au/programs/abc-news-24/NS1413V001S00|X-Forwarded-For=101.175.18.124</link>
 </item>
 
 <item>
