@@ -88,7 +88,7 @@
 
 <item>
 <title>abc</title>
-<link>https://abctvlivehls-lh.akamaihd.net/i/abc1_1@360323/master.m3u8?hdnea=$doregex[token]&amp;pvswf=http://iview.abc.net.au/assets/swf/cineramaWrapper_Acc_018.swf?version=0.2|X-Forwarded-For=101.175.18.124</expres>
+<link>https://abctvlivehls-lh.akamaihd.net/i/abc1_1@360323/master.m3u8?hdnea=$doregex[token]&amp;pvswf=http://iview.abc.net.au/assets/swf/cineramaWrapper_Acc_018.swf?version=0.2|X-Forwarded-For=101.175.18.124</link>
 <regex>
  <name>token</name>
  <expres><![CDATA[#$pyFunction
@@ -108,7 +108,7 @@
 
 <item>
 <title>abc</title>
-<link>https://abctvlivehls-lh.akamaihd.net/i/abc1_1@360323/master.m3u8?hdnea=$doregex[token]|X-Forwarded-For=101.175.18.124</expres>
+<link>https://abctvlivehls-lh.akamaihd.net/i/abc1_1@360323/master.m3u8?hdnea=$doregex[token]|X-Forwarded-For=101.175.18.124</link>
 <regex>
  <name>token</name>
  <expres><![CDATA[#$pyFunction
