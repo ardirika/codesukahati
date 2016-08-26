@@ -40,7 +40,7 @@
 
 <item>
 <title>abc1</title>
-<link>plugin://plugin.video.f4mTester/?streamtype=HDS&amp;maxbitrate=1264000&amp;url=$doregex[get-encoded-url]|X-Forwarded-For=203.164.47.122&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
+<link>plugin://plugin.video.f4mTester/?streamtype=HDS&amp;maxbitrate=1264000&amp;url=$doregex[get-encoded-url]</link>
 <regex>
   <name>get-encoded-url</name>
   <expres>$pyFunction:urllib.quote_plus('http://abctvlivehds-lh.akamaihd.net/z/abc1_1@360322/manifest.f4m?hdcore=true&amp;hdnea=$doregex[token]&amp;hdcore=2.11.3&amp;g=QMJMRWFGQBTZ')</expres>
@@ -62,3 +62,12 @@
 </regex>
 </item>
 	
+<item>
+<title>7</title>
+<link>https://sevenwestmedia01-i.akamaihd.net/hls/live/224814/SYD1/master.m3u8?|X-Forwarded-For=101.175.18.124</link>
+</item>
+
+<item>
+<title>sky</title>
+<link>http://kitdigitaioslive-i.akamaihd.net/hls/live/219670/skyr_ios_unblocked/skyrnsw.m3u8|X-Forwarded-For=101.175.18.124</link>
+</item>
