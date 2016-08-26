@@ -39,7 +39,7 @@
 </item>
 
 <item>
-<title>abc-1</title>
+<title>abc</title>
 <link>plugin://plugin.video.f4mTester/?streamtype=HDS&amp;maxbitrate=1264000&amp;url=$doregex[get-encoded-url]</link>
 <regex>
   <name>get-encoded-url</name>
@@ -52,7 +52,7 @@
  import re
  import requests
  import urllib2
- url = 'http://iview.abc.net.au/auth/'
+ url = 'http://iview.abc.net.au/auth/flash/'
  source = requests.get(url)
  token = re.findall('tokenhd>(.*?)</tokenhd', source.text)[0]
  return token
