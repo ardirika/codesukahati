@@ -39,11 +39,11 @@
 </item>
 
 <item>
-<title>abc</title>
+<title>abc-1</title>
 <link>plugin://plugin.video.f4mTester/?streamtype=HDS&amp;maxbitrate=1264000&amp;url=$doregex[get-encoded-url]</link>
 <regex>
   <name>get-encoded-url</name>
-  <expres>$pyFunction:urllib.quote_plus('http://abctvlivehds-lh.akamaihd.net/z/abc1_1@360322/manifest.f4m?hdcore=true&amp;hdnea=$doregex[token]')</expres>
+  <expres>$pyFunction:urllib.quote_plus('http://abctvlivehds-lh.akamaihd.net/z/abc1_1@360322/manifest.f4m?hdcore=true&amp;hdnea=$doregex[token]&amp;hdcore=3.1.0')</expres>
 </regex>
 <regex>
  <name>token</name>
