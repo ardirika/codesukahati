@@ -104,25 +104,6 @@
 
 <item>
 <title>OK</title>
-<link>http://tglokto-i.akamaihd.net/hls/live/224015/okto_andr/01.m3u8|X-Forwarded-For=203.208.224.155&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
+<link>http://tglokto-lh.akamaihd.net/i/okto_fta@334585/master.m3u8</link>
 </item>
 
-<item>
-<title>OK</title>
-<link>http://tglokto-lh.akamaihd.net/i/okto_fta@334580/master.m3u8|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
-</item>
-
-<item>
-<title>OK</title>
-<link>http://tglokto-lh.akamaihd.net/i/okto_fta@334585/master.m3u8|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
-</item>
-
-<item>
-<title>OK</title>
-<link>http://tglokto-lh.akamaihd.net/i/okto_fta@334586/master.m3u8|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
-</item>
-
-<item>
-<title>su</title>
-<link>http://tglsuria-lh.akamaihd.net/i/suria_fta@334584/master.m3u8</link>
-</item>
