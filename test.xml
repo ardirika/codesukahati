@@ -106,3 +106,13 @@
 <title>sky</title>
 <link>http://kitdigitaioslive-i.akamaihd.net/hls/live/219670/skyr_ios_unblocked/skyrnsw.m3u8|X-Forwarded-For=101.175.18.124</link>
 </item>
+
+<item>
+<title>OK</title>
+<link>http://tglokto-i.akamaihd.net/hls/live/224015/okto_andr/01.m3u8|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
+</item>
+
+<item>
+<title>SU</title>
+<link>http://tglsuria-lh.akamaihd.net/i/suria_fta@334584/index_2_av-b.m3u8?sd=10&amp;rebase=on?sd=10&amp;b=1000-&amp;rebase=on|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
+</item>
