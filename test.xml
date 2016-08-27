@@ -103,7 +103,17 @@
 </item>
 
 <item>
-<title>sky</title>
+<title>Sky Racing 1</title>
+<link>http://kitdigitaioslive-i.akamaihd.net/hls/live/219669/skyracing_live_mobil/sky1.m3u8|X-Forwarded-For=101.175.18.124</link>
+</item>
+
+<item>
+<title>Sky Racing 2</title>
+<link>http://kitdigitaioslive-i.akamaihd.net/hls/live/219669/skyracing_live_mobil/sky2.m3u8|X-Forwarded-For=101.175.18.124</link>
+</item>
+
+<item>
+<title>Sky Racing NSW</title>
 <link>http://kitdigitaioslive-i.akamaihd.net/hls/live/219670/skyr_ios_unblocked/skyrnsw.m3u8|X-Forwarded-For=101.175.18.124</link>
 </item>
 
