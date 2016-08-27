@@ -39,32 +39,8 @@
 </item>
 
 <item>
-<title>abc</title>
-<link>plugin://plugin.video.f4mTester/?streamtype=HDS&amp;maxbitrate=1264000&amp;url=$doregex[get-encoded-url]</link>
-<regex>
-  <name>get-encoded-url</name>
-  <expres>$pyFunction:urllib.quote_plus('http://abctvlivehds-lh.akamaihd.net/z/abc1_1@360322/manifest.f4m?hdcore=true&amp;hdnea=$doregex[token]&amp;hdcore=3.1.0')</expres>
-</regex>
-<regex>
- <name>token</name>
- <expres><![CDATA[#$pyFunction
- def GetLSProData(page_data,Cookie_Jar,m):
- import re
- import requests
- import urllib2
- url = 'http://iview.abc.net.au/auth/flash/'
- source = requests.get(url)
- token = re.findall('tokenhd>(.*?)</tokenhd', source.text)[0]
- return token
- ]]></expres>
- <page></page>
- <referer></referer>
-</regex>
-</item>
-
-<item>
-<title>abc</title>
-<link>plugin://plugin.video.f4mTester/?streamtype=HDS&amp;maxbitrate=1264000&amp;url=$doregex[get-encoded-url]</link>
+<title>abc1</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url=$doregex[get-encoded-url]</link>
 <regex>
   <name>get-encoded-url</name>
   <expres>$pyFunction:urllib.quote_plus('http://abctvlivehds-lh.akamaihd.net/z/abc1_1@360322/manifest.f4m?hdcore=true&amp;hdnea=$doregex[token]&amp;hdcore=3.1.0&amp;pvswf=http://iview.abc.net.au/assets/swf/cineramaWrapper_Acc_018.swf?version=0.2')</expres>
@@ -75,11 +51,11 @@
  def GetLSProData(page_data,Cookie_Jar,m):
  import re
  import requests
- import urllib2
+
  url = 'http://iview.abc.net.au/auth/flash/'
  source = requests.get(url)
- token = re.findall('tokenhd>(.*?)</tokenhd', source.text)[0]
- return token
+ m3u8 = re.findall('tokenhd>(.*?)</tokenhd', source.text)[0]
+ return m3u8
  ]]></expres>
  <page></page>
  <referer></referer>
@@ -87,19 +63,19 @@
 </item>
 
 <item>
-<title>abc</title>
-<link>https://abctvlivehls-lh.akamaihd.net/i/abc1_1@360323/master.m3u8?hdnea=$doregex[token]&amp;pvswf=http://iview.abc.net.au/assets/swf/cineramaWrapper_Acc_018.swf?version=0.2|X-Forwarded-For=101.175.18.124</link>
+<title>abc2</title>
+<link>plugin://plugin.video.f4mTester/?&amp;streamtype=HLS&amp;url=https://abctvlivehls-lh.akamaihd.net/i/abc1_1@360323/master.m3u8?hdnea=$doregex[token]&amp;pvswf=http://iview.abc.net.au/assets/swf/cineramaWrapper_Acc_018.swf?version=0.2|X-Forwarded-For=101.175.18.124&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
 <regex>
  <name>token</name>
  <expres><![CDATA[#$pyFunction
  def GetLSProData(page_data,Cookie_Jar,m):
  import re
  import requests
- import urllib2
+
  url = 'http://iview.abc.net.au/auth/flash/'
  source = requests.get(url)
- token = re.findall('tokenhd>(.*?)</tokenhd', source.text)[0]
- return token
+ m3u8 = re.findall('tokenhd>(.*?)</tokenhd', source.text)[0]
+ return m3u8
  ]]></expres>
  <page></page>
  <referer></referer>
@@ -107,19 +83,19 @@
 </item>
 
 <item>
-<title>abc</title>
-<link>https://abctvlivehls-lh.akamaihd.net/i/abc1_1@360323/master.m3u8?hdnea=$doregex[token]|X-Forwarded-For=101.175.18.124</link>
+<title>abc3</title>
+<link>plugin://plugin.video.f4mTester/?&amp;streamtype=HLS&amp;url=https://abctvlivehls-lh.akamaihd.net/i/abc1_1@360323/master.m3u8?hdnea=$doregex[token]|X-Forwarded-For=101.175.18.124&amp;pvswf=http://iview.abc.net.au/assets/swf/cineramaWrapper_Acc_018.swf?version=0.2&amp;User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
 <regex>
  <name>token</name>
  <expres><![CDATA[#$pyFunction
  def GetLSProData(page_data,Cookie_Jar,m):
  import re
  import requests
- import urllib2
+
  url = 'http://iview.abc.net.au/auth/flash/'
  source = requests.get(url)
- token = re.findall('tokenhd>(.*?)</tokenhd', source.text)[0]
- return token
+ m3u8 = re.findall('tokenhd>(.*?)</tokenhd', source.text)[0]
+ return m3u8
  ]]></expres>
  <page></page>
  <referer></referer>
