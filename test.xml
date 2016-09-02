@@ -9,17 +9,23 @@
 </item>
 
 <item>
-<title>7-1</title>
+<title>seven</title>
 <link>$doregex[get-url]|X-Forwarded-For=101.175.18.124</link> 
 <regex>
   <name>get-url</name>
-  <expres>$pyFunction:urllib.quote_plus('$doregex[token]sevenwestmedia01-i.akamaihd.net/hls/live/224817/PER1/master.m3u8')</expres>
-</regex>
- <regex>
-  <name>token</name>
-  <expres>(.*?)</expres>
-  <page>https://pastebin.com/raw/UBwewVGR</page>
-  <referer>https://pastebin.com/raw/UBwewVGR</referer>
+  <expres><![CDATA[#$pyFunction
+	def GetLSProData(page_data,Cookie_Jar,m):
+	import re
+	import requests
+	import urllib2
+	url = 'https://pastebin.com/raw/UBwewVGR'
+	source = requests.get(url)
+	jsontoken = re.findall('perth":"(.*?)"', source.text)[0]
+	token = jsontoken.replace('http://','https://')
+	return token
+]]></expres>
+<page></page>
+<referer></referer>
 </regex>
 </item>
 
