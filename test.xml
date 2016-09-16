@@ -153,3 +153,12 @@
 <link>http://tglokto-lh.akamaihd.net/i/okto_fta@334585/master.m3u8</link>
 </item>
 
+<item>
+<title>cnn</title>
+<link>http://cnn-i.akamaihd.net/hls/live/253954/dotcomlive_2/master.m3u8|X-Forwarded-For=209.239.112.104</link>
+</item>
+
+<item>
+<title>cnn</title>
+<link>rtmp://c.cdn.livenewschat.eu/edge/ playpath=cnn_live swfUrl='http://msnbclive.eu/player.swf' swfVfy=true live=true</link>
+</item>
