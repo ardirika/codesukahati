@@ -155,10 +155,17 @@
 
 <item>
 <title>cnn</title>
-<link>http://cnn-i.akamaihd.net/hls/live/253954/dotcomlive_2/master.m3u8|X-Forwarded-For=209.239.112.104</link>
+<link>$doregex[makelist]</link>
+<regex>
+	<name>makelist</name>
+	<listrepeat><![CDATA[
+	<title>[makelist.param2]</title>
+	<link>plugin://plugin.video.youtube/play/?video_id=[makelist.param1]</link>
+	<thumbnail></thumbnail>
+	]]></listrepeat>
+	<expres>pl-video-title-link.(?s)(.*?)>\W*(.*?)\W*<\/</expres>
+	<page></page>
+	<cookieJar>https://www.youtube.com/playlist?list=PL8fVUTBmJhHJIx7LEJSC4L8AefFY1xts-<cookieJar>
+</regex>
 </item>
 
-<item>
-<title>cnn</title>
-<link>rtmp://c.cdn.livenewschat.eu/edge/ playpath=cnn_live swfUrl='http://msnbclive.eu/player.swf' swfVfy=true live=true</link>
-</item>
