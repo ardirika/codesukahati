@@ -154,7 +154,7 @@
 </item>
 
 <item>
-<title>test1</title>
+<title>test</title>
 <link>$doregex[makelist]</link>
 <regex>
 	<name>makelist</name>
@@ -163,7 +163,7 @@
 	<link>plugin://plugin.video.youtube/play/?video_id=[makelist.param1]</link>
 	<thumbnail></thumbnail>
 	]]></listrepeat>
-	<expres>pl-video-title-link.(?s)(.*?)>\W*(.*?)\W*<\/</expres>
+	<expres>pl-video-title-link.*?href="/watch?v=(.*?)&amp;index=100</expres>
 	<page>https://www.youtube.com/playlist?list=PL8fVUTBmJhHJIx7LEJSC4L8AefFY1xts-</page>
 	<cookieJar></cookieJar>
 </regex>
