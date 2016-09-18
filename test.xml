@@ -154,7 +154,7 @@
 </item>
 
 <item>
-<title>cnn</title>
+<title>test1</title>
 <link>$doregex[makelist]</link>
 <regex>
 	<name>makelist</name>
@@ -164,8 +164,8 @@
 	<thumbnail></thumbnail>
 	]]></listrepeat>
 	<expres>pl-video-title-link.(?s)(.*?)>\W*(.*?)\W*<\/</expres>
-	<page></page>
-	<cookieJar>https://www.youtube.com/playlist?list=PL8fVUTBmJhHJIx7LEJSC4L8AefFY1xts-<cookieJar>
+	<page>https://www.youtube.com/playlist?list=PL8fVUTBmJhHJIx7LEJSC4L8AefFY1xts-</page>
+	<cookieJar></cookieJar>
 </regex>
 </item>
 
