@@ -170,7 +170,7 @@
 </item>
 
 <item>
-<title>test1</title> 
+<title>test2</title> 
 <link>plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url=$doregex[encodedurl]</link>
 
 <regex>
@@ -190,9 +190,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
  source0= requests.get(url0, headers=headers0)
  m3u8= re.findall('perth":"http://(.*?)"', source0.text)[0]
  url1= 'https://'
- url2 = url1 + m3u8
- source2= requests.get(url2, headers=headers0)
- maxbitrate= re.findall('(http.*)', source2.text)[0]
+ maxbitrate = url1 + m3u8
  return maxbitrate
 ]]></expres>
 <page></page>
