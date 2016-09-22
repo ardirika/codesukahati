@@ -24,10 +24,12 @@
 	import requests
 	import urllib2
 	url = 'https://pastebin.com/raw/UBwewVGR'
-	source = requests.get(url)
-	jsontoken = re.findall('perth":"(.*?)"', source.text)[0]
+	r = requests.get(url)
+	xml = r.content
+	jsontoken = re.findall('perth":"(.*?)"', xml.text)[0]
 	token = jsontoken.replace('http://','https://')
 	return token
+
 ]]></expres>
 <page></page>
 <cookieJar></cookieJar>
@@ -100,7 +102,7 @@
  import requests
 
  url = 'http://iview.abc.net.au/auth/flash/'
- source = requests.get(url)
+ r = requests.get(url)
  xml = r.content
  match = re.search(r'<tokenhd>(.*?)</tokenhd>', xml, flags=(re.DOTALL | re.MULTILINE))
  token = match.group(1).strip()
