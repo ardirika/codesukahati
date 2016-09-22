@@ -169,3 +169,32 @@
 </regex>
 </item>
 
+<item>
+<title>test1</title> 
+<link>plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url=$doregex[encodedurl]</link>
+
+<regex>
+    <name>encodedurl</name>
+    <expres>$pyFunction:urllib.quote_plus('$doregex[get-hls]|X-Forwarded-For=101.175.18.124')</expres>
+    <page></page>
+</regex>
+
+<regex>
+<name>get-hls</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import requests
+ import re
+ headers0 = {'User-Agent': 'Mozilla/5.0 (X11; Linux i686; rv:42.0) Gecko/20100101 Firefox/42.0 Iceweasel/42.0'}
+ url0= 'https://pastebin.com/raw/UBwewVGR'
+ source0= requests.get(url0, headers=headers0)
+ m3u8= re.findall('perth":"http://(.*?)"', source0.text)[0]
+ url1= 'https://'
+ url2 = url1 + m3u8
+ source2= requests.get(url2, headers=headers0)
+ maxbitrate= re.findall('(http.*)', source2.text)[0]
+ return maxbitrate
+]]></expres>
+<page></page>
+</regex>
+</item>
