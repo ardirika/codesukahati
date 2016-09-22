@@ -9,11 +9,11 @@
 </item>
 
 <item>
-<title>711</title>
-<link>plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url=$doregex[encodedurl]</link>
+<title>7e</title>
+<link>$doregex[encodedurl]|X-Forwarded-For=101.175.18.124</link>
 <regex>
 <name>encodedurl</name>
-<expres>$pyFunction:urllib.quote_plus('$doregex[get=URL]|X-Forwarded-For=101.175.18.124')</expres>
+<expres>$pyFunction:urllib.quote_plus('$doregex[get=URL]')</expres>
 <page></page>
 </regex>
 <regex>
