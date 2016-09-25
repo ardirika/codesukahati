@@ -188,11 +188,21 @@ def GetLSProData(page_data,Cookie_Jar,m):
 </item>
 
 <item>
-<title>asahi</title>
+<title>asahi1</title>
 <link>http://203.162.76.92:5021/live/313%7Cc03?pid=JVLEDIGHK3CG@3621RUK&amp;url=http://mokodojo.net/MKT.swf?src=http://203.162.76.92:5021/live/313|c03&amp;random=1474781393618|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
 </item>
 
 <item>
-<title>asahi</title>
-<link>http://203.162.76.92:5021/live/313%7Cc03?pid=JVLEDIGHK3CG@3621RUK&amp;url=http://mokodojo.net/MKT.swf?src=http://203.162.76.92:5021/live/313|c03&amp;random=1474781393618</link>
+<title>asahi2</title>
+<link>http://mokodojo.net/MKT.swf?src=http://203.162.76.92:5021/live/313|c03|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
+</item>
+
+<item>
+<title>asahi3</title>
+<link>http://mokodojo.net/MKT.swf?src=http://203.162.76.92:5021/live/313|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
+</item>
+
+<item>
+<title>asahi4</title>
+<link>http://203.162.76.92:5021/live/313|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
 </item>
