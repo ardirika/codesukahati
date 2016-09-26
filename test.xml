@@ -9,7 +9,7 @@
 </item>
 
 <item>
-<title>7e1</title>
+<title>7e11</title>
 <link>plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url=$doregex[encodedurl]</link>
 <regex>
 <name>encodedurl</name>
@@ -20,13 +20,9 @@
 <name>get=URL</name>
   <expres><![CDATA[#$pyFunction
 	def GetLSProData(page_data,Cookie_Jar,m):
-    import sys
-    import xbmcgui
-    import xbmcplugin
-    import urllib
-    import urllib2
-    import re
-    import fileinput
+        import urllib
+        import urllib2
+        import re
 	
 	response = urllib2.urlopen('http://offsite.tv/18.txt')
 	r = requests.get(response)
@@ -42,7 +38,7 @@
 </item>
 
 <item>
-<title>7e2</title>
+<title>7e22</title>
 <link>$doregex[encodedurl]</link>
 <regex>
 <name>encodedurl</name>
@@ -53,13 +49,9 @@
 <name>get=URL</name>
   <expres><![CDATA[#$pyFunction
 	def GetLSProData(page_data,Cookie_Jar,m):
-    import sys
-    import xbmcgui
-    import xbmcplugin
-    import urllib
-    import urllib2
-    import re
-    import fileinput
+        import urllib
+        import urllib2
+        import re
 	
 	response = urllib2.urlopen('http://offsite.tv/18.txt')
 	r = requests.get(response)
