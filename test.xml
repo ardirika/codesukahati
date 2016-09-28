@@ -9,15 +9,10 @@
 </item>
 
 <item>
-<title>7e11</title>
-<link>plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url=$doregex[encodedurl]</link>
+<title>7e</title>
+<link>$doregex[encodedurl]|X-Forwarded-For=101.175.18.124</link>
 <regex>
 <name>encodedurl</name>
-<expres>$pyFunction:urllib.quote_plus('$doregex[get=URL]sevenwestmedia01-i.akamaihd.net/hls/live/224860/PER6/master.m3u8')</expres>
-<page></page>
-</regex>
-<regex>
-<name>get=URL</name>
   <expres><![CDATA[#$pyFunction
 	def GetLSProData(page_data,Cookie_Jar,m):
         import urllib
@@ -27,36 +22,9 @@
 	response = urllib2.urlopen('http://offsite.tv/18.txt')
 	r = requests.get(response)
 	xml = r.content
-	return xml.text
-	
-]]></expres>
-<page></page>
-<cookieJar></cookieJar>
-</regex>
-<accept>*/*</accept>
-<x-req>ShockwaveFlash/21.0.0.242</x-req>
-</item>
-
-<item>
-<title>7e22</title>
-<link>$doregex[encodedurl]</link>
-<regex>
-<name>encodedurl</name>
-<expres>$pyFunction:urllib.quote_plus('$doregex[get=URL]sevenwestmedia01-i.akamaihd.net/hls/live/224860/PER6/master.m3u8')</expres>
-<page></page>
-</regex>
-<regex>
-<name>get=URL</name>
-  <expres><![CDATA[#$pyFunction
-	def GetLSProData(page_data,Cookie_Jar,m):
-        import urllib
-        import urllib2
-        import re
-	
-	response = urllib2.urlopen('http://offsite.tv/18.txt')
-	r = requests.get(response)
-	xml = r.content
-	return xml.text
+	url = 'sevenwestmedia01-i.akamaihd.net/hls/live/224860/PER6/master.m3u8'
+	token = xml+url
+	return token.text
 	
 ]]></expres>
 <page></page>
