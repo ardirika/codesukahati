@@ -124,3 +124,18 @@
 <link>http://tglokto-lh.akamaihd.net/i/okto_fta@224015/master.m3u8|User-Agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25</link>
 </item>
 http://tglokto-i.akamaihd.net/hls/live/224015/okto_andr/01.m3u8
+
+<item>
+<title>test1</title>
+<link>http://cdn.playwire.com/bolt/js/zeus/embed.js</link>
+</item>
+
+<item>
+<title>test2</title>
+<link>http://config.playwire.com/19004/videos/v2/5169345/zeus.json</link>
+</item>
+
+<item>
+<title>test3</title>
+<f4m>https://config.playwire.com/19004/videos/v2/5169345/manifest.f4m</f4m>
+</item>
