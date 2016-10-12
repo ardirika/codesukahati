@@ -22,8 +22,8 @@
         import fileinput
 	
 	response = urllib2.urlopen('http://offsite.tv/18.txt')
-        for lines in response:
-        print lines
+	r = requests.get(response)
+	lines = r.content
 	url = 'sevenwestmedia01-i.akamaihd.net/hls/live/224817/PER1/master.m3u8?|X-Forwarded-For=101.175.18.124'
 	token = lines+url
 	return token.text
@@ -47,8 +47,8 @@
         import fileinput
 	
 	response = urllib2.urlopen('http://offsite.tv/18.txt')
-        for lines in response:
-        print lines
+	r = requests.get(response)
+	lines = r.content
 	url = 'sevenwestmedia01-i.akamaihd.net/hls/live/224817/PER1/master.m3u8?|X-Forwarded-For=101.175.18.124'
 	token = lines+url
 	return token
@@ -72,8 +72,8 @@
         import fileinput
 	
 	response = urllib2.urlopen('http://offsite.tv/18.txt')
-        for lines in response:
-        print lines
+	r = requests.get(response)
+	lines = r.content
 	url = 'sevenwestmedia01-i.akamaihd.net/hls/live/224817/PER1/master.m3u8?'
 	token = lines+url
 	return token.text
@@ -97,8 +97,31 @@
         import fileinput
 	
 	response = urllib2.urlopen('http://offsite.tv/18.txt')
-        for lines in response:
-        print lines
+	r = requests.get(response)
+	lines = r.content
+	url = 'sevenwestmedia01-i.akamaihd.net/hls/live/224817/PER1/master.m3u8?'
+	token = lines+url
+        return urllib.quote_plus (token + '|X-Forwarded-For=101.175.18.124')
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+<item>
+<title>72</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url=$doregex[encodedurl]</link>
+<regex>
+<name>encodedurl</name>
+  <expres><![CDATA[#$pyFunction
+	def GetLSProData(page_data,Cookie_Jar,m):
+        import urllib
+        import urllib2
+        import re
+        import sys
+        import fileinput
+	
+	lines = 'https://'
 	url = 'sevenwestmedia01-i.akamaihd.net/hls/live/224817/PER1/master.m3u8?'
 	token = lines+url
         return urllib.quote_plus (token + '|X-Forwarded-For=101.175.18.124')
