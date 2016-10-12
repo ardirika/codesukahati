@@ -9,7 +9,7 @@
 </item>
 
 <item>
-<title>7e</title>
+<title>7</title>
 <link>plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url=$doregex[encodedurl]</link>
 <regex>
 <name>encodedurl</name>
@@ -24,7 +24,57 @@
 	response = urllib2.urlopen('http://offsite.tv/18.txt')
         for lines in response:
         print lines
-	url = 'sevenwestmedia01-i.akamaihd.net/hls/live/224860/PER6/master.m3u8|X-Forwarded-For=101.175.18.124'
+	url = 'sevenwestmedia01-i.akamaihd.net/hls/live/224817/PER1/master.m3u8?|X-Forwarded-For=101.175.18.124'
+	token = lines+url
+	return token.text
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+<item>
+<title>7</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url=$doregex[encodedurl]</link>
+<regex>
+<name>encodedurl</name>
+  <expres><![CDATA[#$pyFunction
+	def GetLSProData(page_data,Cookie_Jar,m):
+        import urllib
+        import urllib2
+        import re
+        import sys
+        import fileinput
+	
+	response = urllib2.urlopen('http://offsite.tv/18.txt')
+        for lines in response:
+        print lines
+	url = 'sevenwestmedia01-i.akamaihd.net/hls/live/224817/PER1/master.m3u8?|X-Forwarded-For=101.175.18.124'
+	token = lines+url
+	return token
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+<item>
+<title>7</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url=$doregex[encodedurl]</link>
+<regex>
+<name>encodedurl</name>
+  <expres><![CDATA[#$pyFunction
+	def GetLSProData(page_data,Cookie_Jar,m):
+        import urllib
+        import urllib2
+        import re
+        import sys
+        import fileinput
+	
+	response = urllib2.urlopen('http://offsite.tv/18.txt')
+        for lines in response:
+        print lines
+	url = 'sevenwestmedia01-i.akamaihd.net/hls/live/224817/PER1/master.m3u8?'
 	token = lines+url
 	return token.text
 ]]></expres>
