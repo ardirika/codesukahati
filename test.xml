@@ -9,7 +9,7 @@
 </item>
 
 <item>
-<title>fuji</title>
+<title>JAP</title>
 <link>plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url=$doregex[encodedurl]</link>
 <regex>
 <name>encodedurl</name>
@@ -23,9 +23,11 @@
 	
 	response = urllib2.urlopen('http://exabytetv.info/3.m3u')
 	r = requests.get(response)
-	lines = re.compile(r'http://premium\.exabytetv\.info/gc/([^"]+)/1513/exabytetv', re.DOTALL | re.IGNORECASE).findall(r)
-        lines = 'http://premium\.exabytetv\.info/gc/%s/1513/exabytetv.m3u8' % lines
-	return lines.text
+	lines = r.content
+	print lines
+	token = re.compile(r'http://premium\.exabytetv\.info/gc/(.+?)/1513/exabytetv', re.DOTALL | re.IGNORECASE).findall(lines)
+        token = 'http://premium\.exabytetv\.info/gc/%s/1513/exabytetv.m3u8' % token
+	return token.text
 ]]></expres>
 <page></page>
 <cookieJar></cookieJar>
