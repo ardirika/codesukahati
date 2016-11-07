@@ -20,6 +20,7 @@
         import re
         import sys
         import fileinput
+        import requests
 	
 	response = urllib2.urlopen('http://exabytetv.info/3.m3u')
 	r = requests.get(response)
